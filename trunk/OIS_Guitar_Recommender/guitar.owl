@@ -1,0 +1,834 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.ois.org/guitar-group"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.ois.org/guitar-group">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://www.w3.org/2006/vcard/ns</Import>
+    <Declaration>
+        <Class IRI="http://www.ois.org/guitar.owl#Business"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ois.org/guitar.owl#Dimensions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Part_Description"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ois.org/guitar.owl#Look"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ois.org/guitar.owl#Manufacturer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ois.org/guitar.owl#Offer"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ois.org/guitar.owl#Offer_Part"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ois.org/guitar.owl#Price"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ois.org/guitar.owl#Product_Model"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.ois.org/guitar.owl#Vendor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#contains"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#has"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#has_dimensions"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#has_global_look"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#has_look"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#has_offer_part"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#has_price"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#is"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#is_created_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#is_described_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#is_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#is_offered_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#offers"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#with"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#expires"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_amount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_body_type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_brand"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_color"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_depth"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_discount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_image"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_length"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_material"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_model"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_number_of_frets"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_number_of_strings"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_part_name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_pickup_configuration"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_status"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_string_gauge"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_string_material"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_unit"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_value"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_weight"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_width"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#is_left-handed"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#is_produced_in"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#ships_to"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.ois.org/guitar.owl#EPI-00001"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://www.ois.org/guitar.owl#Business"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Manufacturer"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.ois.org/guitar.owl#Vendor"/>
+        <Class IRI="http://www.w3.org/2006/vcard/ns#Kind"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Business"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.ois.org/guitar.owl#is"/>
+            <Class IRI="http://www.w3.org/2006/vcard/ns#Kind"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Dimensions"/>
+        <ObjectIntersectionOf>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="http://www.ois.org/guitar.owl#has_depth"/>
+                <Datatype abbreviatedIRI="xsd:double"/>
+            </DataExactCardinality>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="http://www.ois.org/guitar.owl#has_length"/>
+                <Datatype abbreviatedIRI="xsd:double"/>
+            </DataExactCardinality>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="http://www.ois.org/guitar.owl#has_width"/>
+                <Datatype abbreviatedIRI="xsd:double"/>
+            </DataExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://www.ois.org/guitar.owl#is_produced_in"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Product_Model"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+        <ObjectIntersectionOf>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="http://www.ois.org/guitar.owl#has_brand"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataExactCardinality>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="http://www.ois.org/guitar.owl#has_model"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ois.org/guitar.owl#has"/>
+            <Class IRI="http://www.ois.org/guitar.owl#Guitar_Part_Description"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ois.org/guitar.owl#has_dimensions"/>
+            <Class IRI="http://www.ois.org/guitar.owl#Dimensions"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.ois.org/guitar.owl#has_global_look"/>
+            <Class IRI="http://www.ois.org/guitar.owl#Look"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.ois.org/guitar.owl#is_created_by"/>
+            <Class IRI="http://www.ois.org/guitar.owl#Manufacturer"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="http://www.ois.org/guitar.owl#has_pickup_configuration"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+        <DataMinCardinality cardinality="1">
+            <DataProperty IRI="http://www.ois.org/guitar.owl#has_image"/>
+            <Datatype abbreviatedIRI="xsd:anyURI"/>
+        </DataMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://www.ois.org/guitar.owl#has_body_type"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://www.ois.org/guitar.owl#has_number_of_frets"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://www.ois.org/guitar.owl#has_number_of_strings"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://www.ois.org/guitar.owl#has_string_gauge"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://www.ois.org/guitar.owl#has_string_material"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://www.ois.org/guitar.owl#has_type"/>
+            <Datatype abbreviatedIRI="xsd:string"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://www.ois.org/guitar.owl#has_weight"/>
+            <Datatype abbreviatedIRI="xsd:double"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://www.ois.org/guitar.owl#is_left-handed"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Part_Description"/>
+        <ObjectIntersectionOf>
+            <ObjectExactCardinality cardinality="1">
+                <ObjectProperty IRI="http://www.ois.org/guitar.owl#is_of"/>
+                <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+            </ObjectExactCardinality>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="http://www.ois.org/guitar.owl#has_part_name"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Part_Description"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.ois.org/guitar.owl#has_look"/>
+            <Class IRI="http://www.ois.org/guitar.owl#Look"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Look"/>
+        <ObjectIntersectionOf>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="http://www.ois.org/guitar.owl#has_color"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataExactCardinality>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="http://www.ois.org/guitar.owl#has_material"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Offer"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://www.ois.org/guitar.owl#has_price"/>
+            <Class IRI="http://www.ois.org/guitar.owl#Price"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Offer"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.ois.org/guitar.owl#has_offer_part"/>
+            <Class IRI="http://www.ois.org/guitar.owl#Offer_Part"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Offer"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.ois.org/guitar.owl#is_offered_by"/>
+            <Class IRI="http://www.ois.org/guitar.owl#Vendor"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Offer_Part"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.ois.org/guitar.owl#with"/>
+            <Class IRI="http://www.ois.org/guitar.owl#Product_Model"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Offer_Part"/>
+        <DataExactCardinality cardinality="1">
+            <DataProperty IRI="http://www.ois.org/guitar.owl#has_amount"/>
+            <Datatype abbreviatedIRI="xsd:integer"/>
+        </DataExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Price"/>
+        <ObjectIntersectionOf>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="http://www.ois.org/guitar.owl#has_unit"/>
+                <Datatype abbreviatedIRI="xsd:string"/>
+            </DataExactCardinality>
+            <DataExactCardinality cardinality="1">
+                <DataProperty IRI="http://www.ois.org/guitar.owl#has_value"/>
+                <Datatype abbreviatedIRI="xsd:double"/>
+            </DataExactCardinality>
+        </ObjectIntersectionOf>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.ois.org/guitar.owl#Product_Model"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://www.ois.org/guitar.owl#is_created_by"/>
+            <Class IRI="http://www.ois.org/guitar.owl#Business"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar"/>
+        <NamedIndividual IRI="http://www.ois.org/guitar.owl#EPI-00001"/>
+    </ClassAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#is_of"/>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#has"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#is_offered_by"/>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#offers"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#contains"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Offer_Part"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#has"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#has_dimensions"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#has_global_look"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#has_look"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Part_Description"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#has_offer_part"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Offer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#has_price"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Offer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#is"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Business"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#is_created_by"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Product_Model"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#is_described_by"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#is_offered_by"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Offer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#with"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Offer_Part"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#contains"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#has"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Part_Description"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#has_dimensions"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Dimensions"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#has_global_look"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Look"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#has_look"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Look"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#has_offer_part"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Offer_Part"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#has_price"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Price"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#is_created_by"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Business"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#is_described_by"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#offers"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Offer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="http://www.ois.org/guitar.owl#with"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Product_Model"/>
+    </ObjectPropertyRange>
+    <FunctionalDataProperty>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_depth"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_length"/>
+    </FunctionalDataProperty>
+    <FunctionalDataProperty>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_width"/>
+    </FunctionalDataProperty>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_amount"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Offer_Part"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_body_type"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_brand"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_color"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Look"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_depth"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Dimensions"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_discount"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Offer"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_image"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_length"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Dimensions"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_material"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Look"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_model"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_name"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Product_Model"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_number_of_frets"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_number_of_strings"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_part_name"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Part_Description"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_pickup_configuration"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_status"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Offer"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_string_gauge"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_string_material"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_type"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_unit"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Price"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_value"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Price"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_weight"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_width"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Dimensions"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#is_left-handed"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar_Description"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#is_produced_in"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Guitar"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#ships_to"/>
+        <Class IRI="http://www.ois.org/guitar.owl#Offer"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_amount"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_body_type"/>
+        <DataOneOf>
+            <Literal datatypeIRI="&rdf;PlainLiteral">hollow</Literal>
+            <Literal datatypeIRI="&rdf;PlainLiteral">semi-hollow</Literal>
+            <Literal datatypeIRI="&rdf;PlainLiteral">solid</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">brand</Literal>
+        </Annotation>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_brand"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">color</Literal>
+        </Annotation>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_color"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">depth (cm)</Literal>
+        </Annotation>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_depth"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_discount"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">image </Literal>
+        </Annotation>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_image"/>
+        <Datatype abbreviatedIRI="xsd:anyURI"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">length (cm)</Literal>
+        </Annotation>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_length"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">material</Literal>
+        </Annotation>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_material"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">model</Literal>
+        </Annotation>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_model"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">number of frets</Literal>
+        </Annotation>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_number_of_frets"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">number of strings</Literal>
+        </Annotation>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_number_of_strings"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">part name</Literal>
+        </Annotation>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_part_name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_pickup_configuration"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_status"/>
+        <DataOneOf>
+            <Literal datatypeIRI="&rdf;PlainLiteral">available</Literal>
+            <Literal datatypeIRI="&rdf;PlainLiteral">expired</Literal>
+            <Literal datatypeIRI="&rdf;PlainLiteral">outsold</Literal>
+            <Literal datatypeIRI="&rdf;PlainLiteral">withdrawn</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">gauge type</Literal>
+        </Annotation>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_string_gauge"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">string material</Literal>
+        </Annotation>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_string_material"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_type"/>
+        <DataOneOf>
+            <Literal datatypeIRI="&rdf;PlainLiteral">acoustic</Literal>
+            <Literal datatypeIRI="&rdf;PlainLiteral">bass</Literal>
+            <Literal datatypeIRI="&rdf;PlainLiteral">classical</Literal>
+            <Literal datatypeIRI="&rdf;PlainLiteral">electric</Literal>
+            <Literal datatypeIRI="&rdf;PlainLiteral">electric-acoustic</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">ISO 4217</Literal>
+        </Annotation>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_unit"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_value"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">weight (kg)</Literal>
+        </Annotation>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_weight"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">width (cm)</Literal>
+        </Annotation>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#has_width"/>
+        <Datatype abbreviatedIRI="xsd:double"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#is_left-handed"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#is_produced_in"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal datatypeIRI="&rdf;PlainLiteral">ISO 3166-1</Literal>
+        </Annotation>
+        <DataProperty IRI="http://www.ois.org/guitar.owl#ships_to"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
