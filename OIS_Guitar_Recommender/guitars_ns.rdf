@@ -1,0 +1,1813 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:map="http://www.ois.org/guitar-group/ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:db="http://www.ois.org/guitar-group/ns"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+  xml:base="http://www.ois.org/guitar-group/ns#" > 
+  <rdf:Description rdf:about="#Address/Romania/Reghin/545300/3%2C_Salcamilor_st.">
+    <vcard:street-address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3, Salcamilor st.</vcard:street-address>
+    <vcard:postal-code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">545300</vcard:postal-code>
+    <rdfs:label>Address #Romania/Reghin/545300/3, Salcamilor st.</rdfs:label>
+    <vcard:locality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reghin</vcard:locality>
+    <vcard:country-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Romania</vcard:country-name>
+    <vcard:region rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mures</vcard:region>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Offer/5">
+    <map:has_price rdf:resource="#Price/700.0E0/USD"/>
+    <map:is_offered_by rdf:resource="#Kind/service%40fender.com"/>
+    <map:Offer_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</map:Offer_number>
+    <rdfs:label>Offer #5</rdfs:label>
+    <map:Offer_priceCurrency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USD</map:Offer_priceCurrency>
+    <map:has_stock_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</map:has_stock_amount>
+    <map:has_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</map:has_status>
+    <map:Offer_priceAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#double">700.0E0</map:Offer_priceAmount>
+    <rdf:type rdf:resource="#Offer"/>
+    <map:contains rdf:resource="#Guitar/FEN-11922"/>
+    <map:contains rdf:resource="#Guitar/FEN-29755"/>
+    <map:has_offer_part rdf:resource="#OfferPart/Fender/Villager%E2%84%A2_12_String%2C_Cutaway_Electric%2C_Solid_Spruce_Top%2C_Mahogany_Back_and_Sides%2C_Fishman%C2%AE_Preamp_with_Built-In_Tuner/1"/>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bank transfer</map:accepts>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paypal</map:accepts>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAN</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</map:ships_to>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Dimensions/119.4E0x50.2E0x13.3E0">
+    <map:has_length rdf:datatype="http://www.w3.org/2001/XMLSchema#double">119.4E0</map:has_length>
+    <map:has_depth rdf:datatype="http://www.w3.org/2001/XMLSchema#double">13.3E0</map:has_depth>
+    <rdfs:label>Dimensions #119.4E0x50.2E0x13.3E0</rdfs:label>
+    <map:has_width rdf:datatype="http://www.w3.org/2001/XMLSchema#double">50.2E0</map:has_width>
+    <rdf:type rdf:resource="#Dimensions"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#OfferPart/Guild/GAD_Series_M-120E/1">
+    <map:with rdf:resource="#GuitarDescription/Guild/GAD_Series_M-120E"/>
+    <rdfs:label>OfferPart #Guild/GAD_Series_M-120E/1</rdfs:label>
+    <map:has_part_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_part_amount>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#OfferPart/Gretsch/G5191BK_Tim_Armstrong_Signature_Electromatic%C2%AE_Hollow_Body/1">
+    <map:with rdf:resource="#GuitarDescription/Gretsch/G5191BK_Tim_Armstrong_Signature_Electromatic%C2%AE_Hollow_Body"/>
+    <rdfs:label>OfferPart #Gretsch/G5191BK_Tim_Armstrong_Signature_Electromatic%C2%AE_Hollow_Body/1</rdfs:label>
+    <map:has_part_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_part_amount>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/HOH-45699">
+    <map:is_described_by rdf:resource="#GuitarDescription/Hohner/HC06"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HOH-45699</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</map:is_produced_in>
+    <rdfs:label>Guitar #HOH-45699</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#OfferPart/Fender/Standard_Jazz_Bass%C2%AE_Left-Handed%2C_Rosewood_Fingerboard%2C_Brown_Sunburst%2C_3-Ply_Parchment_Pickguard%2C_No_Bag/1">
+    <map:with rdf:resource="#GuitarDescription/Fender/Standard_Jazz_Bass%C2%AE_Left-Handed%2C_Rosewood_Fingerboard%2C_Brown_Sunburst%2C_3-Ply_Parchment_Pickguard%2C_No_Bag"/>
+    <rdfs:label>OfferPart #Fender/Standard_Jazz_Bass%C2%AE_Left-Handed%2C_Rosewood_Fingerboard%2C_Brown_Sunburst%2C_3-Ply_Parchment_Pickguard%2C_No_Bag/1</rdfs:label>
+    <map:has_part_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_part_amount>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#OfferPart/LTD/H-330NT/1">
+    <map:with rdf:resource="#GuitarDescription/LTD/H-330NT"/>
+    <rdfs:label>OfferPart #LTD/H-330NT/1</rdfs:label>
+    <map:has_part_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_part_amount>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/FEN-11922">
+    <map:is_described_by rdf:resource="#GuitarDescription/Fender/Villager%E2%84%A2_12_String%2C_Cutaway_Electric%2C_Solid_Spruce_Top%2C_Mahogany_Back_and_Sides%2C_Fishman%C2%AE_Preamp_with_Built-In_Tuner"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FEN-11922</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</map:is_produced_in>
+    <rdfs:label>Guitar #FEN-11922</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/FEN-74930">
+    <map:is_described_by rdf:resource="#GuitarDescription/Fender/Kurt_Cobain_Mustang%C2%AE_Left-Hand%2C_Rosewood_Fingerboard%2C_Fiesta_Red"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FEN-74930</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</map:is_produced_in>
+    <rdfs:label>Guitar #FEN-74930</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/FEN-29755">
+    <map:is_described_by rdf:resource="#GuitarDescription/Fender/Villager%E2%84%A2_12_String%2C_Cutaway_Electric%2C_Solid_Spruce_Top%2C_Mahogany_Back_and_Sides%2C_Fishman%C2%AE_Preamp_with_Built-In_Tuner"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FEN-29755</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</map:is_produced_in>
+    <rdfs:label>Guitar #FEN-29755</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Price/1800.0E0/USD">
+    <rdfs:label>Price #1800.0E0/USD</rdfs:label>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Price/350.0E0/USD">
+    <rdfs:label>Price #350.0E0/USD</rdfs:label>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Address/USA/North_Hollywood/CA_91605/_10913_Vanowen_Street">
+    <vcard:street-address rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> 10913 Vanowen Street</vcard:street-address>
+    <vcard:postal-code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA 91605</vcard:postal-code>
+    <rdfs:label>Address #USA/North Hollywood/CA 91605/ 10913 Vanowen Street</rdfs:label>
+    <vcard:locality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">North Hollywood</vcard:locality>
+    <vcard:country-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</vcard:country-name>
+    <vcard:region rdf:datatype="http://www.w3.org/2001/XMLSchema#string">California</vcard:region>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarDescription/Gretsch/Electromatic_Collection_CVT_III_Cherry">
+    <map:has_dimensions rdf:resource="#Dimensions/47.0E0x13.0E0x5.25E0"/>
+    <map:is_created_by rdf:resource="#Manufacturer/service%40gretschguitars.com"/>
+    <map:has_product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gretsch - Electromatic Collection CVT III Cherry</map:has_product_name>
+    <rdfs:label>GuitarDescription #Gretsch/Electromatic Collection CVT III Cherry</rdfs:label>
+    <map:has_body_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">solid</map:has_body_type>
+    <map:has_string_gauge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">light</map:has_string_gauge>
+    <map:has_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electromatic Collection CVT III Cherry</map:has_model>
+    <map:has_number_of_frets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</map:has_number_of_frets>
+    <map:has_pickup_configuration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H-H-H</map:has_pickup_configuration>
+    <map:has_brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gretsch</map:has_brand>
+    <map:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electric</map:has_type>
+    <map:has_number_of_strings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</map:has_number_of_strings>
+    <map:is_left-handed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</map:is_left-handed>
+    <map:has_string_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">steel</map:has_string_material>
+    <map:has_weight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">7.0E0</map:has_weight>
+    <map:has_product_identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gretsch - Electromatic Collection CVT III Cherry</map:has_product_identifier>
+    <rdf:type rdf:resource="#Guitar_Description"/>
+    <map:has rdf:resource="#GuitarPartDescription/Gretsch/Electromatic_Collection_CVT_III_Cherry/fingerboard"/>
+    <map:has_image rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.austinbazaar.com/media/catalog/product/cache/1/image/512x512/9df78eab33525d08d6e5fb8d27136e95/G/R/GRE-2514030566-2.jpg</map:has_image>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Manufacturer/service%40epiphone.com">
+    <map:is rdf:resource="#Kind/service%40epiphone.com"/>
+    <rdfs:label>Manufacturer #service@epiphone.com</rdfs:label>
+    <rdf:type rdf:resource="#Manufacturer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarDescription/Fender/Pawn_Shop_Bass_VI%2C_Rosewood_Fingerboard%2C_3-Color_Sunburst">
+    <map:has_dimensions rdf:resource="#Dimensions/42.0E0x15.0E0x5.0E0"/>
+    <map:is_created_by rdf:resource="#Manufacturer/service%40fender.com"/>
+    <map:has_product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fender - Pawn Shop Bass VI, Rosewood Fingerboard, 3-Color Sunburst</map:has_product_name>
+    <rdfs:label>GuitarDescription #Fender/Pawn Shop Bass VI, Rosewood Fingerboard, 3-Color Sunburst</rdfs:label>
+    <map:has_body_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">solid</map:has_body_type>
+    <map:has_string_gauge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medium</map:has_string_gauge>
+    <map:has_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pawn Shop Bass VI, Rosewood Fingerboard, 3-Color Sunburst</map:has_model>
+    <map:has_number_of_frets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</map:has_number_of_frets>
+    <map:has_pickup_configuration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H-S-S</map:has_pickup_configuration>
+    <map:has_brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fender</map:has_brand>
+    <map:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bass</map:has_type>
+    <map:has_number_of_strings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</map:has_number_of_strings>
+    <map:is_left-handed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</map:is_left-handed>
+    <map:has_string_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nickel-plated steel</map:has_string_material>
+    <map:has_weight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.89E0</map:has_weight>
+    <map:has_product_identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fender - Pawn Shop Bass VI, Rosewood Fingerboard, 3-Color Sunburst</map:has_product_identifier>
+    <rdf:type rdf:resource="#Guitar_Description"/>
+    <map:has rdf:resource="#GuitarPartDescription/Fender/Pawn_Shop_Bass_VI%2C_Rosewood_Fingerboard%2C_3-Color_Sunburst/fingerboard"/>
+    <map:has rdf:resource="#GuitarPartDescription/Fender/Pawn_Shop_Bass_VI%2C_Rosewood_Fingerboard%2C_3-Color_Sunburst/neck"/>
+    <map:has_image rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ecx.images-amazon.com/images/I/71Mtrd-r85L._SL1500_.jpg</map:has_image>
+  </rdf:Description>
+  <rdf:Description rdf:about="#OfferPart/Fender/American_Deluxe_Dimension%E2%84%A2_Bass_V%2C_Rosewood_Fingerboard%2C_Cayenne_Burst/1">
+    <map:with rdf:resource="#GuitarDescription/Fender/American_Deluxe_Dimension%E2%84%A2_Bass_V%2C_Rosewood_Fingerboard%2C_Cayenne_Burst"/>
+    <rdfs:label>OfferPart #Fender/American_Deluxe_Dimension%E2%84%A2_Bass_V%2C_Rosewood_Fingerboard%2C_Cayenne_Burst/1</rdfs:label>
+    <map:has_part_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_part_amount>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Price/180.0E0/RON">
+    <rdfs:label>Price #180.0E0/RON</rdfs:label>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/HOR-76511">
+    <map:is_described_by rdf:resource="#GuitarDescription/Segada/SM-50"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HOR-76511</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</map:is_produced_in>
+    <rdfs:label>Guitar #HOR-76511</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Dimensions/47.0E0x13.0E0x5.25E0">
+    <map:has_length rdf:datatype="http://www.w3.org/2001/XMLSchema#double">47.0E0</map:has_length>
+    <map:has_depth rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.25E0</map:has_depth>
+    <rdfs:label>Dimensions #47.0E0x13.0E0x5.25E0</rdfs:label>
+    <map:has_width rdf:datatype="http://www.w3.org/2001/XMLSchema#double">13.0E0</map:has_width>
+    <rdf:type rdf:resource="#Dimensions"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Price/300.0E0/USD">
+    <rdfs:label>Price #300.0E0/USD</rdfs:label>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarDescription/Fender/Villager%E2%84%A2_12_String%2C_Cutaway_Electric%2C_Solid_Spruce_Top%2C_Mahogany_Back_and_Sides%2C_Fishman%C2%AE_Preamp_with_Built-In_Tuner">
+    <map:has_dimensions rdf:resource="#Dimensions/107.95E0x43.18E0x12.065E0"/>
+    <map:is_created_by rdf:resource="#Manufacturer/service%40fender.com"/>
+    <map:has_product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fender - Villager™ 12 String, Cutaway Electric, Solid Spruce Top, Mahogany Back and Sides, Fishman® Preamp with Built-In Tuner</map:has_product_name>
+    <rdfs:label>GuitarDescription #Fender/Villager™ 12 String, Cutaway Electric, Solid Spruce Top, Mahogany Back and Sides, Fishman® Preamp with Built-In Tuner</rdfs:label>
+    <map:has_body_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hollow</map:has_body_type>
+    <map:has_string_gauge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">light</map:has_string_gauge>
+    <map:has_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Villager™ 12 String, Cutaway Electric, Solid Spruce Top, Mahogany Back and Sides, Fishman® Preamp with Built-In Tuner</map:has_model>
+    <map:has_number_of_frets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</map:has_number_of_frets>
+    <map:has_brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fender</map:has_brand>
+    <map:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electric-acoustic</map:has_type>
+    <map:has_number_of_strings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</map:has_number_of_strings>
+    <map:is_left-handed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</map:is_left-handed>
+    <map:has_string_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bronze</map:has_string_material>
+    <map:has_weight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.5E0</map:has_weight>
+    <map:has_product_identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fender - Villager™ 12 String, Cutaway Electric, Solid Spruce Top, Mahogany Back and Sides, Fishman® Preamp with Built-In Tuner</map:has_product_identifier>
+    <rdf:type rdf:resource="#Guitar_Description"/>
+    <map:has rdf:resource="#GuitarPartDescription/Fender/Villager%E2%84%A2_12_String%2C_Cutaway_Electric%2C_Solid_Spruce_Top%2C_Mahogany_Back_and_Sides%2C_Fishman%C2%AE_Preamp_with_Built-In_Tuner/neck"/>
+    <map:has_image rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://c1.zzounds.com/media/fit,2018by3200/quality,85/1_Full_Straight_Front_NA-3ecf23a9462a6f88c224b1011ec1593b.jpg</map:has_image>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Offer/6">
+    <map:has_price rdf:resource="#Price/499.0E0/USD"/>
+    <map:is_offered_by rdf:resource="#Kind/service%40espguitars.com"/>
+    <map:Offer_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</map:Offer_number>
+    <rdfs:label>Offer #6</rdfs:label>
+    <map:Offer_priceCurrency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USD</map:Offer_priceCurrency>
+    <map:has_stock_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_stock_amount>
+    <map:has_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</map:has_status>
+    <map:Offer_priceAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#double">499.0E0</map:Offer_priceAmount>
+    <rdf:type rdf:resource="#Offer"/>
+    <map:contains rdf:resource="#Guitar/ESP-29950"/>
+    <map:has_offer_part rdf:resource="#OfferPart/LTD/XTONE_PC-2-12_BLK/1"/>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bank transfer</map:accepts>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paypal</map:accepts>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAN</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</map:ships_to>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Address/USA/Bronx/NY_10459/881_Westchester_Ave">
+    <vcard:street-address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">881 Westchester Ave</vcard:street-address>
+    <vcard:postal-code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NY 10459</vcard:postal-code>
+    <rdfs:label>Address #USA/Bronx/NY 10459/881 Westchester Ave</rdfs:label>
+    <vcard:locality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bronx</vcard:locality>
+    <vcard:country-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</vcard:country-name>
+    <vcard:region rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York</vcard:region>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Manufacturer/service%40hora.ro">
+    <map:is rdf:resource="#Kind/service%40hora.ro"/>
+    <rdfs:label>Manufacturer #service@hora.ro</rdfs:label>
+    <rdf:type rdf:resource="#Manufacturer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Price/450.0E0/USD">
+    <rdfs:label>Price #450.0E0/USD</rdfs:label>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Address/USA/Nashville/TN_37210/645_Massman_Drive">
+    <vcard:street-address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">645 Massman Drive</vcard:street-address>
+    <vcard:postal-code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TN 37210</vcard:postal-code>
+    <rdfs:label>Address #USA/Nashville/TN 37210/645 Massman Drive</rdfs:label>
+    <vcard:locality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nashville</vcard:locality>
+    <vcard:country-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</vcard:country-name>
+    <vcard:region rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tennessee</vcard:region>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#OfferPart/LTD/EC-407_Black_Satin/1">
+    <map:with rdf:resource="#GuitarDescription/LTD/EC-407_Black_Satin"/>
+    <rdfs:label>OfferPart #LTD/EC-407_Black_Satin/1</rdfs:label>
+    <map:has_part_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_part_amount>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarPartDescription/Gretsch/Electromatic_Collection_Jet%E2%84%A2_Club/neck">
+    <map:has_look rdf:resource="#Look/maple/maple"/>
+    <map:is_of rdf:resource="#GuitarDescription/Gretsch/Electromatic_Collection_Jet%E2%84%A2_Club"/>
+    <map:has_part_name>neck</map:has_part_name>
+    <rdfs:label>GuitarPartDescription #Gretsch/Electromatic Collection Jet™ Club/neck</rdfs:label>
+    <rdf:type rdf:resource="#Guitar_Part_Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#OfferPart/Fender/Kurt_Cobain_Mustang%C2%AE_Left-Hand%2C_Rosewood_Fingerboard%2C_Fiesta_Red/1">
+    <map:with rdf:resource="#GuitarDescription/Fender/Kurt_Cobain_Mustang%C2%AE_Left-Hand%2C_Rosewood_Fingerboard%2C_Fiesta_Red"/>
+    <rdfs:label>OfferPart #Fender/Kurt_Cobain_Mustang%C2%AE_Left-Hand%2C_Rosewood_Fingerboard%2C_Fiesta_Red/1</rdfs:label>
+    <map:has_part_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_part_amount>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Address/Germany/Frankfurt_am_Main/60322/Fichardstra%C3%9Fe_46">
+    <vcard:street-address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fichardstraße 46</vcard:street-address>
+    <vcard:postal-code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60322</vcard:postal-code>
+    <rdfs:label>Address #Germany/Frankfurt am Main/60322/Fichardstraße 46</rdfs:label>
+    <vcard:locality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frankfurt am Main</vcard:locality>
+    <vcard:country-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Germany</vcard:country-name>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Manufacturer/service%40ibanez.com">
+    <map:is rdf:resource="#Kind/service%40ibanez.com"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Offer/19">
+    <map:has_price rdf:resource="#Price/680.0E0/USD"/>
+    <map:is_offered_by rdf:resource="#Kind/kriss.koen%40gmail.com"/>
+    <map:Offer_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</map:Offer_number>
+    <rdfs:label>Offer #19</rdfs:label>
+    <map:Offer_priceCurrency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USD</map:Offer_priceCurrency>
+    <map:has_stock_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_stock_amount>
+    <map:has_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</map:has_status>
+    <map:Offer_priceAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#double">680.0E0</map:Offer_priceAmount>
+    <rdf:type rdf:resource="#Offer"/>
+    <map:contains rdf:resource="#Guitar/FEN-61233"/>
+    <map:has_offer_part rdf:resource="#OfferPart/Fender/Villager%E2%84%A2_12_String%2C_Cutaway_Electric%2C_Solid_Spruce_Top%2C_Mahogany_Back_and_Sides%2C_Fishman%C2%AE_Preamp_with_Built-In_Tuner/1"/>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paypal</map:accepts>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BEL</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAN</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEU</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRA</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GBR</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NLD</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</map:ships_to>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarDescription/LTD/EC-407_Black_Satin">
+    <map:is_created_by rdf:resource="#Manufacturer/service%40espguitars.com"/>
+    <map:has_product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LTD - EC-407 Black Satin</map:has_product_name>
+    <rdfs:label>GuitarDescription #LTD/EC-407 Black Satin</rdfs:label>
+    <map:has_body_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">solid</map:has_body_type>
+    <map:has_string_gauge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">light</map:has_string_gauge>
+    <map:has_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EC-407 Black Satin</map:has_model>
+    <map:has_number_of_frets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</map:has_number_of_frets>
+    <map:has_pickup_configuration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H-H</map:has_pickup_configuration>
+    <map:has_brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LTD</map:has_brand>
+    <map:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electric</map:has_type>
+    <map:has_number_of_strings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</map:has_number_of_strings>
+    <map:is_left-handed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</map:is_left-handed>
+    <map:has_string_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">steel</map:has_string_material>
+    <map:has_product_identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LTD - EC-407 Black Satin</map:has_product_identifier>
+    <rdf:type rdf:resource="#Guitar_Description"/>
+    <map:has rdf:resource="#GuitarPartDescription/LTD/EC-407_Black_Satin/fingerboard"/>
+    <map:has rdf:resource="#GuitarPartDescription/LTD/EC-407_Black_Satin/neck"/>
+    <map:has_image rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://a1.images5.thomann.de/pics/prod/271688.jpg</map:has_image>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/EPI-00001">
+    <map:is_described_by rdf:resource="#GuitarDescription/Epiphone/SG_G-400_PRO_CH_%28LH%29"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EPI-00001</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</map:is_produced_in>
+    <rdfs:label>Guitar #EPI-00001</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Price/516.0E0/USD">
+    <rdfs:label>Price #516.0E0/USD</rdfs:label>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarPartDescription/Segada/SM-50/neck">
+    <map:has_look rdf:resource="#Look/maple/mahogany"/>
+    <map:is_of rdf:resource="#GuitarDescription/Segada/SM-50"/>
+    <map:has_part_name>neck</map:has_part_name>
+    <rdfs:label>GuitarPartDescription #Segada/SM-50/neck</rdfs:label>
+    <rdf:type rdf:resource="#Guitar_Part_Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Look/rosewood/brown">
+    <rdfs:label>GuitarDescription #rosewood/brown</rdfs:label>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rosewood</map:has_material>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brown</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Price/333.0E0/USD">
+    <rdfs:label>Price #333.0E0/USD</rdfs:label>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarPartDescription/Fender/Modern_Player_Jazz_Bass%C2%AE%2C_Rosewood_Fingerboard%2C_Olympic_White/fingerboard">
+    <map:has_look rdf:resource="#Look/synthetic_bone%2Frosewood/rosewood"/>
+    <map:is_of rdf:resource="#GuitarDescription/Fender/Modern_Player_Jazz_Bass%C2%AE%2C_Rosewood_Fingerboard%2C_Olympic_White"/>
+    <map:has_part_name>fingerboard</map:has_part_name>
+    <rdfs:label>GuitarPartDescription #Fender/Modern Player Jazz Bass®, Rosewood Fingerboard, Olympic White/fingerboard</rdfs:label>
+    <rdf:type rdf:resource="#Guitar_Part_Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Dimensions/105.41E0x43.18E0x8.89E0">
+    <map:has_length rdf:datatype="http://www.w3.org/2001/XMLSchema#double">105.41E0</map:has_length>
+    <map:has_depth rdf:datatype="http://www.w3.org/2001/XMLSchema#double">8.89E0</map:has_depth>
+    <rdfs:label>Dimensions #105.41E0x43.18E0x8.89E0</rdfs:label>
+    <map:has_width rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.18E0</map:has_width>
+    <rdf:type rdf:resource="#Dimensions"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Manufacturer/service%40hohner.de">
+    <map:is rdf:resource="#Kind/service%40hohner.de"/>
+    <rdfs:label>Manufacturer #service@hohner.de</rdfs:label>
+    <rdf:type rdf:resource="#Manufacturer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/ESP-55330">
+    <map:is_described_by rdf:resource="#GuitarDescription/LTD/H-330NT"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ESP-55330</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</map:is_produced_in>
+    <rdfs:label>Guitar #ESP-55330</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Dimensions/107.95E0x43.18E0x12.065E0">
+    <map:has_length rdf:datatype="http://www.w3.org/2001/XMLSchema#double">107.95E0</map:has_length>
+    <map:has_depth rdf:datatype="http://www.w3.org/2001/XMLSchema#double">12.065E0</map:has_depth>
+    <rdfs:label>Dimensions #107.95E0x43.18E0x12.065E0</rdfs:label>
+    <map:has_width rdf:datatype="http://www.w3.org/2001/XMLSchema#double">43.18E0</map:has_width>
+    <rdf:type rdf:resource="#Dimensions"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarPartDescription/Gretsch/G5191BK_Tim_Armstrong_Signature_Electromatic%C2%AE_Hollow_Body/neck">
+    <map:has_look rdf:resource="#Look/maple/maple"/>
+    <map:is_of rdf:resource="#GuitarDescription/Gretsch/G5191BK_Tim_Armstrong_Signature_Electromatic%C2%AE_Hollow_Body"/>
+    <map:has_part_name>neck</map:has_part_name>
+    <rdfs:label>GuitarPartDescription #Gretsch/G5191BK Tim Armstrong Signature Electromatic® Hollow Body/neck</rdfs:label>
+    <rdf:type rdf:resource="#Guitar_Part_Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Offer/3">
+    <map:has_price rdf:resource="#Price/450.0E0/USD"/>
+    <map:is_offered_by rdf:resource="#Kind/service%40fender.com"/>
+    <map:Offer_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</map:Offer_number>
+    <rdfs:label>Offer #3</rdfs:label>
+    <map:Offer_priceCurrency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USD</map:Offer_priceCurrency>
+    <map:has_stock_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_stock_amount>
+    <map:has_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</map:has_status>
+    <map:Offer_priceAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#double">450.0E0</map:Offer_priceAmount>
+    <rdf:type rdf:resource="#Offer"/>
+    <map:contains rdf:resource="#Guitar/FEN-74930"/>
+    <map:has_offer_part rdf:resource="#OfferPart/Fender/Kurt_Cobain_Mustang%C2%AE_Left-Hand%2C_Rosewood_Fingerboard%2C_Fiesta_Red/1"/>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bank transfer</map:accepts>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paypal</map:accepts>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAN</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</map:ships_to>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Look/rosewood/rosewood">
+    <rdfs:label>GuitarDescription #rosewood/rosewood</rdfs:label>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rosewood</map:has_material>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rosewood</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+    <rdfs:label>GuitarDescription #rosewood/rosewood</rdfs:label>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rosewood</map:has_material>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rosewood</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+    <rdfs:label>GuitarDescription #rosewood/rosewood</rdfs:label>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rosewood</map:has_material>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rosewood</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+    <rdfs:label>GuitarDescription #rosewood/rosewood</rdfs:label>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rosewood</map:has_material>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rosewood</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+    <rdfs:label>GuitarDescription #rosewood/rosewood</rdfs:label>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rosewood</map:has_material>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rosewood</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+    <rdfs:label>GuitarDescription #rosewood/rosewood</rdfs:label>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rosewood</map:has_material>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rosewood</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+    <rdfs:label>GuitarDescription #rosewood/rosewood</rdfs:label>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rosewood</map:has_material>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rosewood</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+    <rdfs:label>GuitarDescription #rosewood/rosewood</rdfs:label>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rosewood</map:has_material>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rosewood</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Look/mahogany/mahogany">
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mahogany</map:has_material>
+    <rdfs:label>GlobalLook #mahogany/mahogany</rdfs:label>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mahogany</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+    <rdfs:label>GuitarDescription #mahogany/mahogany</rdfs:label>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mahogany</map:has_material>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mahogany</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+    <rdfs:label>GuitarDescription #mahogany/mahogany</rdfs:label>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mahogany</map:has_material>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mahogany</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Price/499.0E0/USD">
+    <rdfs:label>Price #499.0E0/USD</rdfs:label>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/ESP-00198">
+    <map:is_described_by rdf:resource="#GuitarDescription/LTD/H-330NT"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ESP-00198</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</map:is_produced_in>
+    <rdfs:label>Guitar #ESP-00198</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Offer/18">
+    <map:has_price rdf:resource="#Price/460.0E0/USD"/>
+    <map:is_offered_by rdf:resource="#Kind/jalte.a%40gmail.com"/>
+    <map:Offer_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</map:Offer_number>
+    <rdfs:label>Offer #18</rdfs:label>
+    <map:Offer_priceCurrency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USD</map:Offer_priceCurrency>
+    <map:has_stock_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_stock_amount>
+    <map:has_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</map:has_status>
+    <map:Offer_priceAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#double">460.0E0</map:Offer_priceAmount>
+    <rdf:type rdf:resource="#Offer"/>
+    <map:contains rdf:resource="#Guitar/FEN-55800"/>
+    <map:has_offer_part rdf:resource="#OfferPart/Fender/Modern_Player_Jazz_Bass%C2%AE%2C_Rosewood_Fingerboard%2C_Olympic_White/1"/>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paypal</map:accepts>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAN</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</map:ships_to>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/HOH-00122">
+    <map:is_described_by rdf:resource="#GuitarDescription/Hohner/HC06"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HOH-00122</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</map:is_produced_in>
+    <rdfs:label>Guitar #HOH-00122</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/HOH-99208">
+    <map:is_described_by rdf:resource="#GuitarDescription/Hohner/HC06"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HOH-99208</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</map:is_produced_in>
+    <rdfs:label>Guitar #HOH-99208</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#OfferPart/Fender/Pawn_Shop_Bass_VI%2C_Rosewood_Fingerboard%2C_3-Color_Sunburst/1">
+    <map:with rdf:resource="#GuitarDescription/Fender/Pawn_Shop_Bass_VI%2C_Rosewood_Fingerboard%2C_3-Color_Sunburst"/>
+    <rdfs:label>OfferPart #Fender/Pawn_Shop_Bass_VI%2C_Rosewood_Fingerboard%2C_3-Color_Sunburst/1</rdfs:label>
+    <map:has_part_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_part_amount>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Name/Jalte/Anna/_/Ms">
+    <vcard:additional-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> </vcard:additional-name>
+    <vcard:honorific-prefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ms</vcard:honorific-prefix>
+    <rdfs:label>Name #Jalte/Anna/ /Ms</rdfs:label>
+    <vcard:family-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jalte</vcard:family-name>
+    <vcard:given-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anna</vcard:given-name>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Name"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarDescription/Hohner/HC06">
+    <map:has_dimensions rdf:resource="#Dimensions/100.33E0x44.45E0x11.43E0"/>
+    <map:is_created_by rdf:resource="#Manufacturer/service%40hohner.de"/>
+    <map:has_product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hohner - HC06</map:has_product_name>
+    <rdfs:label>GuitarDescription #Hohner/HC06</rdfs:label>
+    <map:has_body_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hollow</map:has_body_type>
+    <map:has_string_gauge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">light</map:has_string_gauge>
+    <map:has_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HC06</map:has_model>
+    <map:has_number_of_frets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</map:has_number_of_frets>
+    <map:has_brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hohner</map:has_brand>
+    <map:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classical</map:has_type>
+    <map:has_number_of_strings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</map:has_number_of_strings>
+    <map:is_left-handed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</map:is_left-handed>
+    <map:has_string_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nylon</map:has_string_material>
+    <map:has_weight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1.814E0</map:has_weight>
+    <map:has_product_identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hohner - HC06</map:has_product_identifier>
+    <rdf:type rdf:resource="#Guitar_Description"/>
+    <map:has rdf:resource="#GuitarPartDescription/Hohner/HC06/fingerboard"/>
+    <map:has rdf:resource="#GuitarPartDescription/Hohner/HC06/neck"/>
+    <map:has_image rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.partoch.com/images/materiel/modele/original/3593.jpg</map:has_image>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarPartDescription/Fender/American_Deluxe_Dimension%E2%84%A2_Bass_V%2C_Rosewood_Fingerboard%2C_Cayenne_Burst/neck">
+    <map:has_look rdf:resource="#Look/maple/maple"/>
+    <map:is_of rdf:resource="#GuitarDescription/Fender/American_Deluxe_Dimension%E2%84%A2_Bass_V%2C_Rosewood_Fingerboard%2C_Cayenne_Burst"/>
+    <map:has_part_name>neck</map:has_part_name>
+    <rdfs:label>GuitarPartDescription #Fender/American Deluxe Dimension™ Bass V, Rosewood Fingerboard, Cayenne Burst/neck</rdfs:label>
+    <rdf:type rdf:resource="#Guitar_Part_Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarPartDescription/LTD/EC-407_Black_Satin/fingerboard">
+    <map:has_look rdf:resource="#Look/rosewood/black"/>
+    <map:is_of rdf:resource="#GuitarDescription/LTD/EC-407_Black_Satin"/>
+    <map:has_part_name>fingerboard</map:has_part_name>
+    <rdfs:label>GuitarPartDescription #LTD/EC-407 Black Satin/fingerboard</rdfs:label>
+    <rdf:type rdf:resource="#Guitar_Part_Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#OfferPart/Segada/SM-50/1">
+    <map:with rdf:resource="#GuitarDescription/Segada/SM-50"/>
+    <rdfs:label>OfferPart #Segada/SM-50/1</rdfs:label>
+    <map:has_part_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_part_amount>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Look/mahogany/snow_white">
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mahogany</map:has_material>
+    <rdfs:label>GlobalLook #mahogany/snow white</rdfs:label>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snow white</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/GUI-23800">
+    <map:is_described_by rdf:resource="#GuitarDescription/Guild/GAD_Series_M-120E"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GUI-23800</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</map:is_produced_in>
+    <rdfs:label>Guitar #GUI-23800</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Name/Koen/Kriss//Mr">
+    <vcard:additional-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></vcard:additional-name>
+    <vcard:honorific-prefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mr</vcard:honorific-prefix>
+    <rdfs:label>Name #Koen/Kriss//Mr</rdfs:label>
+    <vcard:family-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Koen</vcard:family-name>
+    <vcard:given-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kriss</vcard:given-name>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Name"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Look/synthetic_bone%2Frosewood/rosewood">
+    <rdfs:label>GuitarDescription #synthetic bone/rosewood/rosewood</rdfs:label>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">synthetic bone/rosewood</map:has_material>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rosewood</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarPartDescription/Hohner/HC06/fingerboard">
+    <map:has_look rdf:resource="#Look/hardwood/hardwood"/>
+    <map:is_of rdf:resource="#GuitarDescription/Hohner/HC06"/>
+    <map:has_part_name>fingerboard</map:has_part_name>
+    <rdfs:label>GuitarPartDescription #Hohner/HC06/fingerboard</rdfs:label>
+    <rdf:type rdf:resource="#Guitar_Part_Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarDescription/Fender/Kurt_Cobain_Mustang%C2%AE_Left-Hand%2C_Rosewood_Fingerboard%2C_Fiesta_Red">
+    <map:has_dimensions rdf:resource="#Dimensions/119.4E0x50.2E0x13.3E0"/>
+    <map:is_created_by rdf:resource="#Manufacturer/service%40fender.com"/>
+    <map:has_product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fender - Kurt Cobain Mustang® Left-Hand, Rosewood Fingerboard, Fiesta Red</map:has_product_name>
+    <rdfs:label>GuitarDescription #Fender/Kurt Cobain Mustang® Left-Hand, Rosewood Fingerboard, Fiesta Red</rdfs:label>
+    <map:has_body_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">solid</map:has_body_type>
+    <map:has_string_gauge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">light</map:has_string_gauge>
+    <map:has_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kurt Cobain Mustang® Left-Hand, Rosewood Fingerboard, Fiesta Red</map:has_model>
+    <map:has_number_of_frets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</map:has_number_of_frets>
+    <map:has_pickup_configuration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H-S</map:has_pickup_configuration>
+    <map:has_brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fender</map:has_brand>
+    <map:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electric</map:has_type>
+    <map:has_number_of_strings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</map:has_number_of_strings>
+    <map:is_left-handed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</map:is_left-handed>
+    <map:has_string_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nickel-plated steel</map:has_string_material>
+    <map:has_weight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.897E0</map:has_weight>
+    <map:has_product_identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fender - Kurt Cobain Mustang® Left-Hand, Rosewood Fingerboard, Fiesta Red</map:has_product_identifier>
+    <rdf:type rdf:resource="#Guitar_Description"/>
+    <map:has rdf:resource="#GuitarPartDescription/Fender/Kurt_Cobain_Mustang%C2%AE_Left-Hand%2C_Rosewood_Fingerboard%2C_Fiesta_Red/neck"/>
+    <map:has_image rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://cdn1.gbase.com/usercontent/gear/3015975/p1_uz20fykkr_ss.jpg</map:has_image>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarPartDescription/Hohner/HC06/neck">
+    <map:has_look rdf:resource="#Look/mahogany/mahogany"/>
+    <map:is_of rdf:resource="#GuitarDescription/Hohner/HC06"/>
+    <map:has_part_name>neck</map:has_part_name>
+    <rdfs:label>GuitarPartDescription #Hohner/HC06/neck</rdfs:label>
+    <rdf:type rdf:resource="#Guitar_Part_Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Kind/service%40epiphone.com">
+    <vcard:hasAddress rdf:resource="#Address/USA/Nashville/TN_37210/645_Massman_Drive"/>
+    <vcard:hasTelephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">615.871.9585</vcard:hasTelephone>
+    <vcard:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.epiphone.com</vcard:hasURL>
+    <rdfs:label>Kind #service@epiphone.com</rdfs:label>
+    <vcard:hasEmailAdress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">service@epiphone.com</vcard:hasEmailAdress>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <vcard:hasLogo rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.redphishmusic.com/img/brands/epiphone_image.jpg</vcard:hasLogo>
+    <rdfs:label>Organization #service@epiphone.com</rdfs:label>
+    <vcard:hasOrganizationName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Epiphone Company</vcard:hasOrganizationName>
+    <rdf:type rdf:resource="#Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Offer/4">
+    <map:has_price rdf:resource="#Price/820.0E0/USD"/>
+    <map:is_offered_by rdf:resource="#Kind/service%40fender.com"/>
+    <map:Offer_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</map:Offer_number>
+    <rdfs:label>Offer #4</rdfs:label>
+    <map:Offer_priceCurrency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USD</map:Offer_priceCurrency>
+    <map:has_discount rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.0E0</map:has_discount>
+    <map:has_stock_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_stock_amount>
+    <map:has_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</map:has_status>
+    <map:Offer_priceAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#double">820.0E0</map:Offer_priceAmount>
+    <rdf:type rdf:resource="#Offer"/>
+    <map:contains rdf:resource="#Guitar/FEN-40087"/>
+    <map:has_offer_part rdf:resource="#OfferPart/Fender/Standard_Jazz_Bass%C2%AE_Left-Handed%2C_Rosewood_Fingerboard%2C_Brown_Sunburst%2C_3-Ply_Parchment_Pickguard%2C_No_Bag/1"/>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bank transfer</map:accepts>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paypal</map:accepts>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAN</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</map:ships_to>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Look/mahogany/satin_black">
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mahogany</map:has_material>
+    <rdfs:label>GlobalLook #mahogany/satin black</rdfs:label>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">satin black</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Offer/17">
+    <map:has_price rdf:resource="#Price/516.0E0/USD"/>
+    <map:is_offered_by rdf:resource="#Kind/service%40guildguitars.com"/>
+    <map:Offer_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</map:Offer_number>
+    <rdfs:label>Offer #17</rdfs:label>
+    <map:Offer_priceCurrency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USD</map:Offer_priceCurrency>
+    <map:has_discount rdf:datatype="http://www.w3.org/2001/XMLSchema#double">10.0E0</map:has_discount>
+    <map:has_stock_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_stock_amount>
+    <map:has_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</map:has_status>
+    <map:Offer_priceAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#double">516.0E0</map:Offer_priceAmount>
+    <rdf:type rdf:resource="#Offer"/>
+    <map:contains rdf:resource="#Guitar/GUI-23800"/>
+    <map:has_offer_part rdf:resource="#OfferPart/Guild/GAD_Series_M-120E/1"/>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bank transfer</map:accepts>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paypal</map:accepts>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BEL</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAN</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEU</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRA</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GBR</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NLD</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</map:ships_to>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarPartDescription/Fender/Standard_Jazz_Bass%C2%AE_Left-Handed%2C_Rosewood_Fingerboard%2C_Brown_Sunburst%2C_3-Ply_Parchment_Pickguard%2C_No_Bag/neck">
+    <map:has_look rdf:resource="#Look/maple/tinted_satin_urethane_maple"/>
+    <map:is_of rdf:resource="#GuitarDescription/Fender/Standard_Jazz_Bass%C2%AE_Left-Handed%2C_Rosewood_Fingerboard%2C_Brown_Sunburst%2C_3-Ply_Parchment_Pickguard%2C_No_Bag"/>
+    <map:has_part_name>neck</map:has_part_name>
+    <rdfs:label>GuitarPartDescription #Fender/Standard Jazz Bass® Left-Handed, Rosewood Fingerboard, Brown Sunburst, 3-Ply Parchment Pickguard, No Bag/neck</rdfs:label>
+    <rdf:type rdf:resource="#Guitar_Part_Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Price/798.0E0/USD">
+    <rdfs:label>Price #798.0E0/USD</rdfs:label>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Address/USA/Scottsdale/AZ_85255/17600_N._Perimeter_Drive%2C_Suite_100">
+    <vcard:street-address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17600 N. Perimeter Drive, Suite 100</vcard:street-address>
+    <vcard:postal-code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AZ 85255</vcard:postal-code>
+    <rdfs:label>Address #USA/Scottsdale/AZ 85255/17600 N. Perimeter Drive, Suite 100</rdfs:label>
+    <vcard:locality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scottsdale</vcard:locality>
+    <vcard:country-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</vcard:country-name>
+    <vcard:region rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arizona</vcard:region>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+    <vcard:street-address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17600 N. Perimeter Drive, Suite 100</vcard:street-address>
+    <vcard:postal-code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AZ 85255</vcard:postal-code>
+    <rdfs:label>Address #USA/Scottsdale/AZ 85255/17600 N. Perimeter Drive, Suite 100</rdfs:label>
+    <vcard:locality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scottsdale</vcard:locality>
+    <vcard:country-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</vcard:country-name>
+    <vcard:region rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arizona</vcard:region>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+    <vcard:street-address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17600 N. Perimeter Drive, Suite 100</vcard:street-address>
+    <vcard:postal-code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AZ 85255</vcard:postal-code>
+    <rdfs:label>Address #USA/Scottsdale/AZ 85255/17600 N. Perimeter Drive, Suite 100</rdfs:label>
+    <vcard:locality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scottsdale</vcard:locality>
+    <vcard:country-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</vcard:country-name>
+    <vcard:region rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arizona</vcard:region>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Price/100.0E0/EUR">
+    <rdfs:label>Price #100.0E0/EUR</rdfs:label>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Manufacturer/service%40fender.com">
+    <map:is rdf:resource="#Kind/service%40fender.com"/>
+    <rdfs:label>Manufacturer #service@fender.com</rdfs:label>
+    <rdf:type rdf:resource="#Manufacturer"/>
+    <rdfs:label>Manufacturer #service@fender.com</rdfs:label>
+    <rdf:type rdf:resource="#Manufacturer"/>
+    <rdfs:label>Manufacturer #service@fender.com</rdfs:label>
+    <rdf:type rdf:resource="#Manufacturer"/>
+    <rdfs:label>Manufacturer #service@fender.com</rdfs:label>
+    <rdf:type rdf:resource="#Manufacturer"/>
+    <rdfs:label>Manufacturer #service@fender.com</rdfs:label>
+    <rdf:type rdf:resource="#Manufacturer"/>
+    <rdfs:label>Manufacturer #service@fender.com</rdfs:label>
+    <rdf:type rdf:resource="#Manufacturer"/>
+    <rdfs:label>Manufacturer #service@fender.com</rdfs:label>
+    <rdf:type rdf:resource="#Manufacturer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarDescription/LTD/H-330NT">
+    <map:is_created_by rdf:resource="#Manufacturer/service%40espguitars.com"/>
+    <map:has_product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LTD - H-330NT</map:has_product_name>
+    <rdfs:label>GuitarDescription #LTD/H-330NT</rdfs:label>
+    <map:has_body_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">solid</map:has_body_type>
+    <map:has_string_gauge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">light</map:has_string_gauge>
+    <map:has_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H-330NT</map:has_model>
+    <map:has_number_of_frets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</map:has_number_of_frets>
+    <map:has_pickup_configuration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H-H</map:has_pickup_configuration>
+    <map:has_brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LTD</map:has_brand>
+    <map:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electric</map:has_type>
+    <map:has_number_of_strings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</map:has_number_of_strings>
+    <map:is_left-handed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</map:is_left-handed>
+    <map:has_string_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">steel</map:has_string_material>
+    <map:has_product_identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LTD - H-330NT</map:has_product_identifier>
+    <rdf:type rdf:resource="#Guitar_Description"/>
+    <map:has rdf:resource="#GuitarPartDescription/LTD/H-330NT/fingerboard"/>
+    <map:has rdf:resource="#GuitarPartDescription/LTD/H-330NT/neck"/>
+    <map:has_image rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://static.bax-shop.nl/components/com_virtuemart/shop_image/product/ltd_h-330nt_sw_snow_white_001.jpg</map:has_image>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Look/maple/maple">
+    <rdfs:label>GuitarDescription #maple/maple</rdfs:label>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maple</map:has_material>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maple</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+    <rdfs:label>GuitarDescription #maple/maple</rdfs:label>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maple</map:has_material>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maple</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+    <rdfs:label>GuitarDescription #maple/maple</rdfs:label>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maple</map:has_material>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maple</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+    <rdfs:label>GuitarDescription #maple/maple</rdfs:label>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maple</map:has_material>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maple</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+    <rdfs:label>GuitarDescription #maple/maple</rdfs:label>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maple</map:has_material>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maple</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+    <rdfs:label>GuitarDescription #maple/maple</rdfs:label>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maple</map:has_material>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maple</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+    <rdfs:label>GuitarDescription #maple/maple</rdfs:label>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maple</map:has_material>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maple</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Look/maple/black">
+    <rdfs:label>GuitarDescription #maple/black</rdfs:label>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maple</map:has_material>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">black</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarPartDescription/LTD/XTONE_PC-2-12_BLK/fingerboard">
+    <map:has_look rdf:resource="#Look/rosewood/rosewood"/>
+    <map:is_of rdf:resource="#GuitarDescription/LTD/XTONE_PC-2-12_BLK"/>
+    <map:has_part_name>fingerboard</map:has_part_name>
+    <rdfs:label>GuitarPartDescription #LTD/XTONE PC-2-12 BLK/fingerboard</rdfs:label>
+    <rdf:type rdf:resource="#Guitar_Part_Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarDescription/Fender/Standard_Jazz_Bass%C2%AE_Left-Handed%2C_Rosewood_Fingerboard%2C_Brown_Sunburst%2C_3-Ply_Parchment_Pickguard%2C_No_Bag">
+    <map:is_created_by rdf:resource="#Manufacturer/service%40fender.com"/>
+    <map:has_product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fender - Standard Jazz Bass® Left-Handed, Rosewood Fingerboard, Brown Sunburst, 3-Ply Parchment Pickguard, No Bag</map:has_product_name>
+    <rdfs:label>GuitarDescription #Fender/Standard Jazz Bass® Left-Handed, Rosewood Fingerboard, Brown Sunburst, 3-Ply Parchment Pickguard, No Bag</rdfs:label>
+    <map:has_body_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">solid</map:has_body_type>
+    <map:has_string_gauge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">light</map:has_string_gauge>
+    <map:has_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Standard Jazz Bass® Left-Handed, Rosewood Fingerboard, Brown Sunburst, 3-Ply Parchment Pickguard, No Bag</map:has_model>
+    <map:has_number_of_frets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</map:has_number_of_frets>
+    <map:has_pickup_configuration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S-S</map:has_pickup_configuration>
+    <map:has_brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fender</map:has_brand>
+    <map:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bass</map:has_type>
+    <map:has_number_of_strings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</map:has_number_of_strings>
+    <map:is_left-handed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</map:is_left-handed>
+    <map:has_string_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">steel</map:has_string_material>
+    <map:has_weight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.078E0</map:has_weight>
+    <map:has_product_identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fender - Standard Jazz Bass® Left-Handed, Rosewood Fingerboard, Brown Sunburst, 3-Ply Parchment Pickguard, No Bag</map:has_product_identifier>
+    <rdf:type rdf:resource="#Guitar_Description"/>
+    <map:has rdf:resource="#GuitarPartDescription/Fender/Standard_Jazz_Bass%C2%AE_Left-Handed%2C_Rosewood_Fingerboard%2C_Brown_Sunburst%2C_3-Ply_Parchment_Pickguard%2C_No_Bag/neck"/>
+    <map:has_image rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.fairdealmusic.co.uk/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/s/-/s-jazz-bs-lh.jpg</map:has_image>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Look/spruce/natural">
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spruce</map:has_material>
+    <rdfs:label>GlobalLook #spruce/natural</rdfs:label>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">natural</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spruce</map:has_material>
+    <rdfs:label>GlobalLook #spruce/natural</rdfs:label>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">natural</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Price/425.0E0/USD">
+    <rdfs:label>Price #425.0E0/USD</rdfs:label>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Price/460.0E0/USD">
+    <rdfs:label>Price #460.0E0/USD</rdfs:label>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Look/ash/cayenne_burst">
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ash</map:has_material>
+    <rdfs:label>GlobalLook #ash/cayenne burst</rdfs:label>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cayenne burst</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarPartDescription/LTD/H-330NT/neck">
+    <map:has_look rdf:resource="#Look/maple/maple"/>
+    <map:is_of rdf:resource="#GuitarDescription/LTD/H-330NT"/>
+    <map:has_part_name>neck</map:has_part_name>
+    <rdfs:label>GuitarPartDescription #LTD/H-330NT/neck</rdfs:label>
+    <rdf:type rdf:resource="#Guitar_Part_Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/FEN-66731">
+    <map:is_described_by rdf:resource="#GuitarDescription/Fender/American_Deluxe_Dimension%E2%84%A2_Bass_V%2C_Rosewood_Fingerboard%2C_Cayenne_Burst"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FEN-66731</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</map:is_produced_in>
+    <rdfs:label>Guitar #FEN-66731</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Offer/16">
+    <map:has_price rdf:resource="#Price/2740.0E0/USD"/>
+    <map:is_offered_by rdf:resource="#Kind/service%40fender.com"/>
+    <map:Offer_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</map:Offer_number>
+    <rdfs:label>Offer #16</rdfs:label>
+    <map:Offer_priceCurrency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USD</map:Offer_priceCurrency>
+    <map:has_stock_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_stock_amount>
+    <map:has_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</map:has_status>
+    <map:Offer_priceAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#double">2740.0E0</map:Offer_priceAmount>
+    <rdf:type rdf:resource="#Offer"/>
+    <map:contains rdf:resource="#Guitar/FEN-66731"/>
+    <map:has_offer_part rdf:resource="#OfferPart/Fender/American_Deluxe_Dimension%E2%84%A2_Bass_V%2C_Rosewood_Fingerboard%2C_Cayenne_Burst/1"/>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bank transfer</map:accepts>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paypal</map:accepts>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAN</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</map:ships_to>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Address/Germany/Trossingen/78647/Andreas-Koch-Stra%C3%9Fe_9">
+    <vcard:street-address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andreas-Koch-Straße 9</vcard:street-address>
+    <vcard:postal-code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">78647</vcard:postal-code>
+    <rdfs:label>Address #Germany/Trossingen/78647/Andreas-Koch-Straße 9</rdfs:label>
+    <vcard:locality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trossingen</vcard:locality>
+    <vcard:country-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Germany</vcard:country-name>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#OfferPart/Hohner/HC06/1">
+    <map:with rdf:resource="#GuitarDescription/Hohner/HC06"/>
+    <rdfs:label>OfferPart #Hohner/HC06/1</rdfs:label>
+    <map:has_part_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_part_amount>
+    <rdf:type rdf:resource="#Price"/>
+    <map:with rdf:resource="#GuitarDescription/Hohner/HC06"/>
+    <rdfs:label>OfferPart #Hohner/HC06/1</rdfs:label>
+    <map:has_part_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_part_amount>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarPartDescription/Segada/SM-50/fingerboard">
+    <map:has_look rdf:resource="#Look/rosewood/rosewood"/>
+    <map:is_of rdf:resource="#GuitarDescription/Segada/SM-50"/>
+    <map:has_part_name>fingerboard</map:has_part_name>
+    <rdfs:label>GuitarPartDescription #Segada/SM-50/fingerboard</rdfs:label>
+    <rdf:type rdf:resource="#Guitar_Part_Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarDescription/Gretsch/G5191BK_Tim_Armstrong_Signature_Electromatic%C2%AE_Hollow_Body">
+    <map:is_created_by rdf:resource="#Manufacturer/service%40gretschguitars.com"/>
+    <map:has_product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gretsch - G5191BK Tim Armstrong Signature Electromatic® Hollow Body</map:has_product_name>
+    <rdfs:label>GuitarDescription #Gretsch/G5191BK Tim Armstrong Signature Electromatic® Hollow Body</rdfs:label>
+    <map:has_body_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">semi-hollow</map:has_body_type>
+    <map:has_string_gauge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">light</map:has_string_gauge>
+    <map:has_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G5191BK Tim Armstrong Signature Electromatic® Hollow Body</map:has_model>
+    <map:has_number_of_frets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</map:has_number_of_frets>
+    <map:has_pickup_configuration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H-H</map:has_pickup_configuration>
+    <map:has_brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gretsch</map:has_brand>
+    <map:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electric</map:has_type>
+    <map:has_number_of_strings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</map:has_number_of_strings>
+    <map:is_left-handed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</map:is_left-handed>
+    <map:has_string_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">steel</map:has_string_material>
+    <map:has_product_identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gretsch - G5191BK Tim Armstrong Signature Electromatic® Hollow Body</map:has_product_identifier>
+    <rdf:type rdf:resource="#Guitar_Description"/>
+    <map:has rdf:resource="#GuitarPartDescription/Gretsch/G5191BK_Tim_Armstrong_Signature_Electromatic%C2%AE_Hollow_Body/fingerboard"/>
+    <map:has rdf:resource="#GuitarPartDescription/Gretsch/G5191BK_Tim_Armstrong_Signature_Electromatic%C2%AE_Hollow_Body/neck"/>
+    <map:has_image rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://images.miretail.com/products/full/GretschGuitars/633990323598258616.jpg</map:has_image>
+    <map:has_image rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://media.fmicdirect.com/gretsch/images/products/guitars/2516000506_frt_wlg_001.jpg</map:has_image>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarPartDescription/Gretsch/Electromatic_Collection_CVT_III_Cherry/fingerboard">
+    <map:has_look rdf:resource="#Look/rosewood/rosewood"/>
+    <map:is_of rdf:resource="#GuitarDescription/Gretsch/Electromatic_Collection_CVT_III_Cherry"/>
+    <map:has_part_name>fingerboard</map:has_part_name>
+    <rdfs:label>GuitarPartDescription #Gretsch/Electromatic Collection CVT III Cherry/fingerboard</rdfs:label>
+    <rdf:type rdf:resource="#Guitar_Part_Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Manufacturer/service%40guildguitars.com">
+    <map:is rdf:resource="#Kind/service%40guildguitars.com"/>
+    <rdfs:label>Manufacturer #service@guildguitars.com</rdfs:label>
+    <rdf:type rdf:resource="#Manufacturer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Look/rosewood/black">
+    <rdfs:label>GuitarDescription #rosewood/black</rdfs:label>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rosewood</map:has_material>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">black</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/GRE-28955">
+    <map:is_described_by rdf:resource="#GuitarDescription/Gretsch/Electromatic_Collection_CVT_III_Cherry"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GRE-28955</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</map:is_produced_in>
+    <rdfs:label>Guitar #GRE-28955</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarDescription/Fender/Wayne_Kramer_Royal_Tone_Dreadnought_CE%2C_Indian_Rosewood_Fingerboard%2C_Vintage_Sunburst">
+    <map:has_dimensions rdf:resource="#Dimensions/114.3E0x45.72E0x17.78E0"/>
+    <map:is_created_by rdf:resource="#Manufacturer/service%40fender.com"/>
+    <map:has_product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fender - Wayne Kramer Royal Tone Dreadnought CE, Indian Rosewood Fingerboard, Vintage Sunburst</map:has_product_name>
+    <rdfs:label>GuitarDescription #Fender/Wayne Kramer Royal Tone Dreadnought CE, Indian Rosewood Fingerboard, Vintage Sunburst</rdfs:label>
+    <map:has_body_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hollow</map:has_body_type>
+    <map:has_string_gauge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">light</map:has_string_gauge>
+    <map:has_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wayne Kramer Royal Tone Dreadnought CE, Indian Rosewood Fingerboard, Vintage Sunburst</map:has_model>
+    <map:has_number_of_frets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</map:has_number_of_frets>
+    <map:has_brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fender</map:has_brand>
+    <map:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electric-acoustic</map:has_type>
+    <map:has_number_of_strings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</map:has_number_of_strings>
+    <map:is_left-handed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</map:is_left-handed>
+    <map:has_string_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bronze</map:has_string_material>
+    <map:has_weight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.536E0</map:has_weight>
+    <map:has_product_identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fender - Wayne Kramer Royal Tone Dreadnought CE, Indian Rosewood Fingerboard, Vintage Sunburst</map:has_product_identifier>
+    <rdf:type rdf:resource="#Guitar_Description"/>
+    <map:has rdf:resource="#GuitarPartDescription/Fender/Wayne_Kramer_Royal_Tone_Dreadnought_CE%2C_Indian_Rosewood_Fingerboard%2C_Vintage_Sunburst/neck"/>
+    <map:has_image rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.stevesmusic.com/images/acoustic_guitars/8651.jpg</map:has_image>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/FEN-61233">
+    <map:is_described_by rdf:resource="#GuitarDescription/Fender/Villager%E2%84%A2_12_String%2C_Cutaway_Electric%2C_Solid_Spruce_Top%2C_Mahogany_Back_and_Sides%2C_Fishman%C2%AE_Preamp_with_Built-In_Tuner"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FEN-61233</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</map:is_produced_in>
+    <rdfs:label>Guitar #FEN-61233</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Look/maple/tinted_satin_urethane_maple">
+    <rdfs:label>GuitarDescription #maple/tinted satin urethane maple</rdfs:label>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maple</map:has_material>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tinted satin urethane maple</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#OfferPart/Fender/Modern_Player_Jazz_Bass%C2%AE%2C_Rosewood_Fingerboard%2C_Olympic_White/1">
+    <map:with rdf:resource="#GuitarDescription/Fender/Modern_Player_Jazz_Bass%C2%AE%2C_Rosewood_Fingerboard%2C_Olympic_White"/>
+    <rdfs:label>OfferPart #Fender/Modern_Player_Jazz_Bass%C2%AE%2C_Rosewood_Fingerboard%2C_Olympic_White/1</rdfs:label>
+    <map:has_part_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_part_amount>
+    <rdf:type rdf:resource="#Price"/>
+    <map:with rdf:resource="#GuitarDescription/Fender/Modern_Player_Jazz_Bass%C2%AE%2C_Rosewood_Fingerboard%2C_Olympic_White"/>
+    <rdfs:label>OfferPart #Fender/Modern_Player_Jazz_Bass%C2%AE%2C_Rosewood_Fingerboard%2C_Olympic_White/1</rdfs:label>
+    <map:has_part_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_part_amount>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Kind/service%40fender.com">
+    <vcard:hasAddress rdf:resource="#Address/USA/Scottsdale/AZ_85255/17600_N._Perimeter_Drive%2C_Suite_100"/>
+    <vcard:hasTelephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(480) 596-7195</vcard:hasTelephone>
+    <vcard:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.fender.com</vcard:hasURL>
+    <rdfs:label>Kind #service@fender.com</rdfs:label>
+    <vcard:hasEmailAdress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">service@fender.com</vcard:hasEmailAdress>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <vcard:hasLogo rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://gocouponz.com/wp-content/uploads/2013/12/fender-logo-209372.jpg</vcard:hasLogo>
+    <rdfs:label>Organization #service@fender.com</rdfs:label>
+    <vcard:hasOrganizationName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fender Musical Instruments Corporation</vcard:hasOrganizationName>
+    <rdf:type rdf:resource="#Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Look/alder/brown_sunburst">
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alder</map:has_material>
+    <rdfs:label>GlobalLook #alder/brown sunburst</rdfs:label>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brown sunburst</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarPartDescription/Fender/American_Deluxe_Dimension%E2%84%A2_Bass_V%2C_Rosewood_Fingerboard%2C_Cayenne_Burst/fingerboard">
+    <map:has_look rdf:resource="#Look/rosewood/rosewood"/>
+    <map:is_of rdf:resource="#GuitarDescription/Fender/American_Deluxe_Dimension%E2%84%A2_Bass_V%2C_Rosewood_Fingerboard%2C_Cayenne_Burst"/>
+    <map:has_part_name>fingerboard</map:has_part_name>
+    <rdfs:label>GuitarPartDescription #Fender/American Deluxe Dimension™ Bass V, Rosewood Fingerboard, Cayenne Burst/fingerboard</rdfs:label>
+    <rdf:type rdf:resource="#Guitar_Part_Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Price/820.0E0/USD">
+    <rdfs:label>Price #820.0E0/USD</rdfs:label>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Offer/9">
+    <map:has_price rdf:resource="#Price/350.0E0/USD"/>
+    <map:is_offered_by rdf:resource="#Kind/service%40gretschguitars.com"/>
+    <map:Offer_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</map:Offer_number>
+    <rdfs:label>Offer #9</rdfs:label>
+    <map:Offer_priceCurrency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USD</map:Offer_priceCurrency>
+    <map:has_stock_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_stock_amount>
+    <map:has_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</map:has_status>
+    <map:Offer_priceAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#double">350.0E0</map:Offer_priceAmount>
+    <rdf:type rdf:resource="#Offer"/>
+    <map:contains rdf:resource="#Guitar/GRE-28955"/>
+    <map:has_offer_part rdf:resource="#OfferPart/Gretsch/Electromatic_Collection_CVT_III_Cherry/1"/>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bank transfer</map:accepts>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">credit card</map:accepts>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAN</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</map:ships_to>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarPartDescription/LTD/EC-407_Black_Satin/neck">
+    <map:has_look rdf:resource="#Look/maple/black"/>
+    <map:is_of rdf:resource="#GuitarDescription/LTD/EC-407_Black_Satin"/>
+    <map:has_part_name>neck</map:has_part_name>
+    <rdfs:label>GuitarPartDescription #LTD/EC-407 Black Satin/neck</rdfs:label>
+    <rdf:type rdf:resource="#Guitar_Part_Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Price/1080.0E0/USD">
+    <rdfs:label>Price #1080.0E0/USD</rdfs:label>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Look/spruce/spruce">
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spruce</map:has_material>
+    <rdfs:label>GlobalLook #spruce/spruce</rdfs:label>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spruce</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarPartDescription/Fender/Kurt_Cobain_Mustang%C2%AE_Left-Hand%2C_Rosewood_Fingerboard%2C_Fiesta_Red/neck">
+    <map:has_look rdf:resource="#Look/maple/maple"/>
+    <map:is_of rdf:resource="#GuitarDescription/Fender/Kurt_Cobain_Mustang%C2%AE_Left-Hand%2C_Rosewood_Fingerboard%2C_Fiesta_Red"/>
+    <map:has_part_name>neck</map:has_part_name>
+    <rdfs:label>GuitarPartDescription #Fender/Kurt Cobain Mustang® Left-Hand, Rosewood Fingerboard, Fiesta Red/neck</rdfs:label>
+    <rdf:type rdf:resource="#Guitar_Part_Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/FEN-00773">
+    <map:is_described_by rdf:resource="#GuitarDescription/Fender/Wayne_Kramer_Royal_Tone_Dreadnought_CE%2C_Indian_Rosewood_Fingerboard%2C_Vintage_Sunburst"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FEN-00773</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</map:is_produced_in>
+    <rdfs:label>Guitar #FEN-00773</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Offer/1">
+    <map:has_price rdf:resource="#Price/333.0E0/USD"/>
+    <map:is_offered_by rdf:resource="#Kind/service%40epiphone.com"/>
+    <map:Offer_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:Offer_number>
+    <rdfs:label>Offer #1</rdfs:label>
+    <map:Offer_priceCurrency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USD</map:Offer_priceCurrency>
+    <map:has_stock_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_stock_amount>
+    <map:has_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</map:has_status>
+    <map:Offer_priceAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#double">333.0E0</map:Offer_priceAmount>
+    <rdf:type rdf:resource="#Offer"/>
+    <map:contains rdf:resource="#Guitar/EPI-00001"/>
+    <map:has_offer_part rdf:resource="#OfferPart/Epiphone/SG_G-400_PRO_CH_%28LH%29/1"/>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bank transfer</map:accepts>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">credit card</map:accepts>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paypal</map:accepts>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BEL</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAN</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRA</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</map:ships_to>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Look/maple/silver">
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maple</map:has_material>
+    <rdfs:label>GlobalLook #maple/silver</rdfs:label>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">silver</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarPartDescription/Gretsch/G5191BK_Tim_Armstrong_Signature_Electromatic%C2%AE_Hollow_Body/fingerboard">
+    <map:has_look rdf:resource="#Look/rosewood/rosewood"/>
+    <map:is_of rdf:resource="#GuitarDescription/Gretsch/G5191BK_Tim_Armstrong_Signature_Electromatic%C2%AE_Hollow_Body"/>
+    <map:has_part_name>fingerboard</map:has_part_name>
+    <rdfs:label>GuitarPartDescription #Gretsch/G5191BK Tim Armstrong Signature Electromatic® Hollow Body/fingerboard</rdfs:label>
+    <rdf:type rdf:resource="#Guitar_Part_Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Look/mahogany/cherry">
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mahogany</map:has_material>
+    <rdfs:label>GlobalLook #mahogany/cherry</rdfs:label>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cherry</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mahogany</map:has_material>
+    <rdfs:label>GlobalLook #mahogany/cherry</rdfs:label>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cherry</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Kind/kriss.koen%40gmail.com">
+    <vcard:hasName rdf:resource="#Name/Koen/Kriss//Mr"/>
+    <rdfs:label>Individual #kriss.koen@gmail.com</rdfs:label>
+    <rdf:type rdf:resource="#Individual"/>
+    <vcard:hasAddress rdf:resource="#Address/USA/Bronx/NY_10459/881_Westchester_Ave"/>
+    <vcard:hasTelephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(011) 347-756-2576</vcard:hasTelephone>
+    <rdfs:label>Kind #kriss.koen@gmail.com</rdfs:label>
+    <vcard:hasEmailAdress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kriss.koen@gmail.com</vcard:hasEmailAdress>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Kind/service%40guildguitars.com">
+    <vcard:hasAddress rdf:resource="#Address/USA/Scottsdale/AZ_85255/17600_N._Perimeter_Drive%2C_Suite_100"/>
+    <vcard:hasTelephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(480) 596-7195</vcard:hasTelephone>
+    <vcard:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.guildguitars.com/</vcard:hasURL>
+    <rdfs:label>Kind #service@guildguitars.com</rdfs:label>
+    <vcard:hasEmailAdress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">service@guildguitars.com</vcard:hasEmailAdress>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <vcard:hasLogo rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.drguitarmusic.com/images/Guitar%20Logos/Acoustic/guild_script_logo_png.jpg</vcard:hasLogo>
+    <rdfs:label>Organization #service@guildguitars.com</rdfs:label>
+    <vcard:hasOrganizationName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guild Guitars</vcard:hasOrganizationName>
+    <rdf:type rdf:resource="#Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Offer/15">
+    <map:has_price rdf:resource="#Price/1080.0E0/USD"/>
+    <map:is_offered_by rdf:resource="#Kind/service%40fender.com"/>
+    <map:Offer_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</map:Offer_number>
+    <rdfs:label>Offer #15</rdfs:label>
+    <map:Offer_priceCurrency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USD</map:Offer_priceCurrency>
+    <map:has_stock_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_stock_amount>
+    <map:has_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</map:has_status>
+    <map:Offer_priceAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1080.0E0</map:Offer_priceAmount>
+    <rdf:type rdf:resource="#Offer"/>
+    <map:contains rdf:resource="#Guitar/FEN-08553"/>
+    <map:has_offer_part rdf:resource="#OfferPart/Fender/Pawn_Shop_Bass_VI%2C_Rosewood_Fingerboard%2C_3-Color_Sunburst/1"/>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bank transfer</map:accepts>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paypal</map:accepts>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAN</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</map:ships_to>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Price/680.0E0/USD">
+    <rdfs:label>Price #680.0E0/USD</rdfs:label>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarPartDescription/Fender/Wayne_Kramer_Royal_Tone_Dreadnought_CE%2C_Indian_Rosewood_Fingerboard%2C_Vintage_Sunburst/neck">
+    <map:has_look rdf:resource="#Look/mahogany/mahogany"/>
+    <map:is_of rdf:resource="#GuitarDescription/Fender/Wayne_Kramer_Royal_Tone_Dreadnought_CE%2C_Indian_Rosewood_Fingerboard%2C_Vintage_Sunburst"/>
+    <map:has_part_name>neck</map:has_part_name>
+    <rdfs:label>GuitarPartDescription #Fender/Wayne Kramer Royal Tone Dreadnought CE, Indian Rosewood Fingerboard, Vintage Sunburst/neck</rdfs:label>
+    <rdf:type rdf:resource="#Guitar_Part_Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarDescription/Fender/Modern_Player_Jazz_Bass%C2%AE%2C_Rosewood_Fingerboard%2C_Olympic_White">
+    <map:is_created_by rdf:resource="#Manufacturer/service%40fender.com"/>
+    <map:has_product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fender - Modern Player Jazz Bass®, Rosewood Fingerboard, Olympic White</map:has_product_name>
+    <rdfs:label>GuitarDescription #Fender/Modern Player Jazz Bass®, Rosewood Fingerboard, Olympic White</rdfs:label>
+    <map:has_body_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">solid</map:has_body_type>
+    <map:has_string_gauge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medium</map:has_string_gauge>
+    <map:has_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Modern Player Jazz Bass®, Rosewood Fingerboard, Olympic White</map:has_model>
+    <map:has_number_of_frets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</map:has_number_of_frets>
+    <map:has_pickup_configuration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H-H</map:has_pickup_configuration>
+    <map:has_brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fender</map:has_brand>
+    <map:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bass</map:has_type>
+    <map:has_number_of_strings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</map:has_number_of_strings>
+    <map:is_left-handed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</map:is_left-handed>
+    <map:has_string_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">steel</map:has_string_material>
+    <map:has_weight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.804E0</map:has_weight>
+    <map:has_product_identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fender - Modern Player Jazz Bass®, Rosewood Fingerboard, Olympic White</map:has_product_identifier>
+    <rdf:type rdf:resource="#Guitar_Description"/>
+    <map:has rdf:resource="#GuitarPartDescription/Fender/Modern_Player_Jazz_Bass%C2%AE%2C_Rosewood_Fingerboard%2C_Olympic_White/fingerboard"/>
+    <map:has_image rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://2.bp.blogspot.com/-n9b03hAKLWk/UPOG7hamMWI/AAAAAAAAJTc/xLuWOdkio8Y/s1600/86ceb3c861ac3d7b0737b2ccde488ca3+%25285%2529.png</map:has_image>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarDescription/Epiphone/SG_G-400_PRO_CH_%28LH%29">
+    <map:has_dimensions rdf:resource="#Dimensions/105.41E0x43.18E0x8.89E0"/>
+    <map:is_created_by rdf:resource="#Manufacturer/service%40epiphone.com"/>
+    <map:has_product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Epiphone - SG G-400 PRO CH (LH)</map:has_product_name>
+    <rdfs:label>GuitarDescription #Epiphone/SG G-400 PRO CH (LH)</rdfs:label>
+    <map:has_body_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">solid</map:has_body_type>
+    <map:has_string_gauge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">light</map:has_string_gauge>
+    <map:has_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SG G-400 PRO CH (LH)</map:has_model>
+    <map:has_number_of_frets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</map:has_number_of_frets>
+    <map:has_pickup_configuration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H-H</map:has_pickup_configuration>
+    <map:has_brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Epiphone</map:has_brand>
+    <map:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electric</map:has_type>
+    <map:has_number_of_strings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</map:has_number_of_strings>
+    <map:is_left-handed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</map:is_left-handed>
+    <map:has_string_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">steel</map:has_string_material>
+    <map:has_weight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.62E0</map:has_weight>
+    <map:has_product_identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Epiphone - SG G-400 PRO CH (LH)</map:has_product_identifier>
+    <rdf:type rdf:resource="#Guitar_Description"/>
+    <map:has rdf:resource="#GuitarPartDescription/Epiphone/SG_G-400_PRO_CH_%28LH%29/fingerboard"/>
+    <map:has_image rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://images.epiphone.com.s3.amazonaws.com/Products/SG/G-400-PRO/Gallery/G400PRO_CH_Splash.jpg</map:has_image>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Name/Zolt/John//Mr">
+    <vcard:additional-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></vcard:additional-name>
+    <vcard:honorific-prefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mr</vcard:honorific-prefix>
+    <rdfs:label>Name #Zolt/John//Mr</rdfs:label>
+    <vcard:family-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zolt</vcard:family-name>
+    <vcard:given-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John</vcard:given-name>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Name"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Offer/10">
+    <map:has_price rdf:resource="#Price/1800.0E0/USD"/>
+    <map:is_offered_by rdf:resource="#Kind/service%40gretschguitars.com"/>
+    <map:Offer_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</map:Offer_number>
+    <rdfs:label>Offer #10</rdfs:label>
+    <map:Offer_priceCurrency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USD</map:Offer_priceCurrency>
+    <map:has_stock_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_stock_amount>
+    <map:has_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</map:has_status>
+    <map:Offer_priceAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#double">1800.0E0</map:Offer_priceAmount>
+    <rdf:type rdf:resource="#Offer"/>
+    <map:contains rdf:resource="#Guitar/GRE-39948"/>
+    <map:has_offer_part rdf:resource="#OfferPart/Gretsch/G5191BK_Tim_Armstrong_Signature_Electromatic%C2%AE_Hollow_Body/1"/>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bank transfer</map:accepts>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">credit card</map:accepts>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAN</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</map:ships_to>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Price/2740.0E0/USD">
+    <rdfs:label>Price #2740.0E0/USD</rdfs:label>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Kind/zolt.john%40gmail.com">
+    <vcard:hasName rdf:resource="#Name/Zolt/John//Mr"/>
+    <rdfs:label>Individual #zolt.john@gmail.com</rdfs:label>
+    <rdf:type rdf:resource="#Individual"/>
+    <vcard:hasAddress rdf:resource="#Address/Germany/Frankfurt_am_Main/60322/Fichardstra%C3%9Fe_46"/>
+    <vcard:hasTelephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0049 6524 - 622</vcard:hasTelephone>
+    <rdfs:label>Kind #zolt.john@gmail.com</rdfs:label>
+    <vcard:hasEmailAdress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zolt.john@gmail.com</vcard:hasEmailAdress>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/FEN-55800">
+    <map:is_described_by rdf:resource="#GuitarDescription/Fender/Modern_Player_Jazz_Bass%C2%AE%2C_Rosewood_Fingerboard%2C_Olympic_White"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FEN-55800</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</map:is_produced_in>
+    <rdfs:label>Guitar #FEN-55800</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/ESP-12330">
+    <map:is_described_by rdf:resource="#GuitarDescription/LTD/EC-407_Black_Satin"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ESP-12330</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</map:is_produced_in>
+    <rdfs:label>Guitar #ESP-12330</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/FEN-22330">
+    <map:is_described_by rdf:resource="#GuitarDescription/Fender/Modern_Player_Jazz_Bass%C2%AE%2C_Rosewood_Fingerboard%2C_Olympic_White"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FEN-22330</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</map:is_produced_in>
+    <rdfs:label>Guitar #FEN-22330</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#OfferPart/Fender/Wayne_Kramer_Royal_Tone_Dreadnought_CE%2C_Indian_Rosewood_Fingerboard%2C_Vintage_Sunburst/1">
+    <map:with rdf:resource="#GuitarDescription/Fender/Wayne_Kramer_Royal_Tone_Dreadnought_CE%2C_Indian_Rosewood_Fingerboard%2C_Vintage_Sunburst"/>
+    <rdfs:label>OfferPart #Fender/Wayne_Kramer_Royal_Tone_Dreadnought_CE%2C_Indian_Rosewood_Fingerboard%2C_Vintage_Sunburst/1</rdfs:label>
+    <map:has_part_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_part_amount>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Price/90.0E0/EUR">
+    <rdfs:label>Price #90.0E0/EUR</rdfs:label>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Kind/service%40hohner.de">
+    <vcard:hasAddress rdf:resource="#Address/Germany/Trossingen/78647/Andreas-Koch-Stra%C3%9Fe_9"/>
+    <vcard:hasTelephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0049 7425 - 200</vcard:hasTelephone>
+    <vcard:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.hohner.eu/</vcard:hasURL>
+    <rdfs:label>Kind #service@hohner.de</rdfs:label>
+    <vcard:hasEmailAdress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">service@hohner.de</vcard:hasEmailAdress>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <vcard:hasLogo rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSi8Yi0n6fLUYPasbQmXxSz8C0jmwiAvbE2z_90w-RH6lL_PIqtMB1FYr8</vcard:hasLogo>
+    <rdfs:label>Organization #service@hohner.de</rdfs:label>
+    <vcard:hasOrganizationName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HOHNER Musikinstrumente GmbH &amp; Co. KG</vcard:hasOrganizationName>
+    <rdf:type rdf:resource="#Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Offer/20">
+    <map:has_price rdf:resource="#Price/100.0E0/EUR"/>
+    <map:is_offered_by rdf:resource="#Kind/zolt.john%40gmail.com"/>
+    <map:Offer_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</map:Offer_number>
+    <rdfs:label>Offer #20</rdfs:label>
+    <map:Offer_priceCurrency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EUR</map:Offer_priceCurrency>
+    <map:has_stock_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_stock_amount>
+    <map:has_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</map:has_status>
+    <map:Offer_priceAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.0E0</map:Offer_priceAmount>
+    <rdf:type rdf:resource="#Offer"/>
+    <map:contains rdf:resource="#Guitar/HOH-00122"/>
+    <map:has_offer_part rdf:resource="#OfferPart/Hohner/HC06/1"/>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paypal</map:accepts>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BEL</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAN</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRA</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</map:ships_to>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Look/maple/mahogany">
+    <rdfs:label>GuitarDescription #maple/mahogany</rdfs:label>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maple</map:has_material>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mahogany</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Look/hardwood/hardwood">
+    <rdfs:label>GuitarDescription #hardwood/hardwood</rdfs:label>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hardwood</map:has_material>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hardwood</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarPartDescription/Fender/Villager%E2%84%A2_12_String%2C_Cutaway_Electric%2C_Solid_Spruce_Top%2C_Mahogany_Back_and_Sides%2C_Fishman%C2%AE_Preamp_with_Built-In_Tuner/neck">
+    <map:has_look rdf:resource="#Look/maple/maple"/>
+    <map:is_of rdf:resource="#GuitarDescription/Fender/Villager%E2%84%A2_12_String%2C_Cutaway_Electric%2C_Solid_Spruce_Top%2C_Mahogany_Back_and_Sides%2C_Fishman%C2%AE_Preamp_with_Built-In_Tuner"/>
+    <map:has_part_name>neck</map:has_part_name>
+    <rdfs:label>GuitarPartDescription #Fender/Villager™ 12 String, Cutaway Electric, Solid Spruce Top, Mahogany Back and Sides, Fishman® Preamp with Built-In Tuner/neck</rdfs:label>
+    <rdf:type rdf:resource="#Guitar_Part_Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/GRE-39948">
+    <map:is_described_by rdf:resource="#GuitarDescription/Gretsch/G5191BK_Tim_Armstrong_Signature_Electromatic%C2%AE_Hollow_Body"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GRE-39948</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</map:is_produced_in>
+    <rdfs:label>Guitar #GRE-39948</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/ESP-00882">
+    <map:is_described_by rdf:resource="#GuitarDescription/LTD/H-330NT"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ESP-00882</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</map:is_produced_in>
+    <rdfs:label>Guitar #ESP-00882</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Offer/2">
+    <map:has_price rdf:resource="#Price/567.0E0/USD"/>
+    <map:is_offered_by rdf:resource="#Kind/service%40fender.com"/>
+    <map:Offer_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</map:Offer_number>
+    <rdfs:label>Offer #2</rdfs:label>
+    <map:Offer_priceCurrency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USD</map:Offer_priceCurrency>
+    <map:has_stock_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</map:has_stock_amount>
+    <map:has_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</map:has_status>
+    <map:Offer_priceAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#double">567.0E0</map:Offer_priceAmount>
+    <rdf:type rdf:resource="#Offer"/>
+    <map:contains rdf:resource="#Guitar/FEN-22330"/>
+    <map:contains rdf:resource="#Guitar/FEN-48883"/>
+    <map:has_offer_part rdf:resource="#OfferPart/Fender/Modern_Player_Jazz_Bass%C2%AE%2C_Rosewood_Fingerboard%2C_Olympic_White/1"/>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bank transfer</map:accepts>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paypal</map:accepts>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAN</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</map:ships_to>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Dimensions/114.3E0x45.72E0x17.78E0">
+    <map:has_length rdf:datatype="http://www.w3.org/2001/XMLSchema#double">114.3E0</map:has_length>
+    <map:has_depth rdf:datatype="http://www.w3.org/2001/XMLSchema#double">17.78E0</map:has_depth>
+    <rdfs:label>Dimensions #114.3E0x45.72E0x17.78E0</rdfs:label>
+    <map:has_width rdf:datatype="http://www.w3.org/2001/XMLSchema#double">45.72E0</map:has_width>
+    <rdf:type rdf:resource="#Dimensions"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Price/567.0E0/USD">
+    <rdfs:label>Price #567.0E0/USD</rdfs:label>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#OfferPart/Epiphone/SG_G-400_PRO_CH_%28LH%29/1">
+    <map:with rdf:resource="#GuitarDescription/Epiphone/SG_G-400_PRO_CH_%28LH%29"/>
+    <rdfs:label>OfferPart #Epiphone/SG_G-400_PRO_CH_%28LH%29/1</rdfs:label>
+    <map:has_part_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_part_amount>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Kind/service%40ibanez.com">
+    <vcard:hasAddress rdf:resource="#Address/Netherlands/Uithoorn/1422_AK_/J.N._Wagenaarweg_9"/>
+    <vcard:hasTelephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0031 (0)297-567788</vcard:hasTelephone>
+    <vcard:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.ibanez.com/</vcard:hasURL>
+    <rdfs:label>Kind #service@ibanez.com</rdfs:label>
+    <vcard:hasEmailAdress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">service@ibanez.com</vcard:hasEmailAdress>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <vcard:hasLogo rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcS-XYPlIsSB3AiNGcoF1bK1j_PJc-HnM57qD2mzCw1-l8OjuCszxA</vcard:hasLogo>
+    <rdfs:label>Organization #service@ibanez.com</rdfs:label>
+    <vcard:hasOrganizationName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ibanez Guitars</vcard:hasOrganizationName>
+    <rdf:type rdf:resource="#Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Price/700.0E0/USD">
+    <rdfs:label>Price #700.0E0/USD</rdfs:label>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarDescription/Segada/SM-50">
+    <map:is_created_by rdf:resource="#Manufacturer/service%40hora.ro"/>
+    <map:has_product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Segada - SM-50</map:has_product_name>
+    <rdfs:label>GuitarDescription #Segada/SM-50</rdfs:label>
+    <map:has_body_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hollow</map:has_body_type>
+    <map:has_string_gauge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">light</map:has_string_gauge>
+    <map:has_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SM-50</map:has_model>
+    <map:has_number_of_frets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</map:has_number_of_frets>
+    <map:has_brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Segada</map:has_brand>
+    <map:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acoustic</map:has_type>
+    <map:has_number_of_strings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</map:has_number_of_strings>
+    <map:is_left-handed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</map:is_left-handed>
+    <map:has_string_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">steel</map:has_string_material>
+    <map:has_product_identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Segada - SM-50</map:has_product_identifier>
+    <rdf:type rdf:resource="#Guitar_Description"/>
+    <map:has rdf:resource="#GuitarPartDescription/Segada/SM-50/fingerboard"/>
+    <map:has rdf:resource="#GuitarPartDescription/Segada/SM-50/neck"/>
+    <map:has_image rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://magazinulrapsodia.ro/image/data/chitare-acustice/SM50.jpg</map:has_image>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Offer/14">
+    <map:has_price rdf:resource="#Price/300.0E0/USD"/>
+    <map:is_offered_by rdf:resource="#Kind/service%40espguitars.com"/>
+    <map:Offer_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</map:Offer_number>
+    <rdfs:label>Offer #14</rdfs:label>
+    <map:Offer_priceCurrency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USD</map:Offer_priceCurrency>
+    <map:has_stock_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</map:has_stock_amount>
+    <map:has_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</map:has_status>
+    <map:Offer_priceAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#double">300.0E0</map:Offer_priceAmount>
+    <rdf:type rdf:resource="#Offer"/>
+    <map:contains rdf:resource="#Guitar/ESP-00198"/>
+    <map:contains rdf:resource="#Guitar/ESP-00882"/>
+    <map:contains rdf:resource="#Guitar/ESP-55330"/>
+    <map:has_offer_part rdf:resource="#OfferPart/LTD/H-330NT/1"/>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bank transfer</map:accepts>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paypal</map:accepts>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAN</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</map:ships_to>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Look/alder/olympic_white">
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alder</map:has_material>
+    <rdfs:label>GlobalLook #alder/olympic white</rdfs:label>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">olympic white</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarDescription/Gretsch/Electromatic_Collection_Jet%E2%84%A2_Club">
+    <map:is_created_by rdf:resource="#Manufacturer/service%40gretschguitars.com"/>
+    <map:has_product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gretsch - Electromatic Collection Jet™ Club</map:has_product_name>
+    <rdfs:label>GuitarDescription #Gretsch/Electromatic Collection Jet™ Club</rdfs:label>
+    <map:has_body_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">solid</map:has_body_type>
+    <map:has_string_gauge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">light</map:has_string_gauge>
+    <map:has_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electromatic Collection Jet™ Club</map:has_model>
+    <map:has_number_of_frets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</map:has_number_of_frets>
+    <map:has_pickup_configuration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H-H</map:has_pickup_configuration>
+    <map:has_brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gretsch</map:has_brand>
+    <map:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electric</map:has_type>
+    <map:has_number_of_strings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</map:has_number_of_strings>
+    <map:is_left-handed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</map:is_left-handed>
+    <map:has_string_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">steel</map:has_string_material>
+    <map:has_weight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">6.078E0</map:has_weight>
+    <map:has_product_identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gretsch - Electromatic Collection Jet™ Club</map:has_product_identifier>
+    <rdf:type rdf:resource="#Guitar_Description"/>
+    <map:has rdf:resource="#GuitarPartDescription/Gretsch/Electromatic_Collection_Jet%E2%84%A2_Club/neck"/>
+    <map:has_image rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://media.fmicdirect.com/gretsch/images/products/guitars/2519010547_frt_wlg_001.jpg</map:has_image>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarPartDescription/Fender/Pawn_Shop_Bass_VI%2C_Rosewood_Fingerboard%2C_3-Color_Sunburst/neck">
+    <map:has_look rdf:resource="#Look/maple/maple"/>
+    <map:is_of rdf:resource="#GuitarDescription/Fender/Pawn_Shop_Bass_VI%2C_Rosewood_Fingerboard%2C_3-Color_Sunburst"/>
+    <map:has_part_name>neck</map:has_part_name>
+    <rdfs:label>GuitarPartDescription #Fender/Pawn Shop Bass VI, Rosewood Fingerboard, 3-Color Sunburst/neck</rdfs:label>
+    <rdf:type rdf:resource="#Guitar_Part_Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#OfferPart/Gretsch/Electromatic_Collection_Jet%E2%84%A2_Club/1">
+    <map:with rdf:resource="#GuitarDescription/Gretsch/Electromatic_Collection_Jet%E2%84%A2_Club"/>
+    <rdfs:label>OfferPart #Gretsch/Electromatic_Collection_Jet%E2%84%A2_Club/1</rdfs:label>
+    <map:has_part_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_part_amount>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Offer/11">
+    <map:has_price rdf:resource="#Price/180.0E0/RON"/>
+    <map:is_offered_by rdf:resource="#Kind/service%40hora.ro"/>
+    <map:Offer_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</map:Offer_number>
+    <rdfs:label>Offer #11</rdfs:label>
+    <map:Offer_priceCurrency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RON</map:Offer_priceCurrency>
+    <map:has_stock_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_stock_amount>
+    <map:has_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</map:has_status>
+    <map:Offer_priceAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#double">180.0E0</map:Offer_priceAmount>
+    <rdf:type rdf:resource="#Offer"/>
+    <map:contains rdf:resource="#Guitar/HOR-76511"/>
+    <map:has_offer_part rdf:resource="#OfferPart/Segada/SM-50/1"/>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bank transfer</map:accepts>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">credit card</map:accepts>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ROU</map:ships_to>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/FEN-08553">
+    <map:is_described_by rdf:resource="#GuitarDescription/Fender/Pawn_Shop_Bass_VI%2C_Rosewood_Fingerboard%2C_3-Color_Sunburst"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FEN-08553</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</map:is_produced_in>
+    <rdfs:label>Guitar #FEN-08553</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Offer/7">
+    <map:has_price rdf:resource="#Price/540.0E0/USD"/>
+    <map:is_offered_by rdf:resource="#Kind/service%40fender.com"/>
+    <map:Offer_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</map:Offer_number>
+    <rdfs:label>Offer #7</rdfs:label>
+    <map:Offer_priceCurrency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USD</map:Offer_priceCurrency>
+    <map:has_stock_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_stock_amount>
+    <map:has_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</map:has_status>
+    <map:Offer_priceAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#double">540.0E0</map:Offer_priceAmount>
+    <rdf:type rdf:resource="#Offer"/>
+    <map:contains rdf:resource="#Guitar/FEN-00773"/>
+    <map:has_offer_part rdf:resource="#OfferPart/Fender/Wayne_Kramer_Royal_Tone_Dreadnought_CE%2C_Indian_Rosewood_Fingerboard%2C_Vintage_Sunburst/1"/>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bank transfer</map:accepts>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paypal</map:accepts>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAN</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</map:ships_to>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarDescription/Guild/GAD_Series_M-120E">
+    <map:is_created_by rdf:resource="#Manufacturer/service%40guildguitars.com"/>
+    <map:has_product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guild - GAD Series M-120E</map:has_product_name>
+    <rdfs:label>GuitarDescription #Guild/GAD Series M-120E</rdfs:label>
+    <map:has_body_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hollow</map:has_body_type>
+    <map:has_string_gauge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">light</map:has_string_gauge>
+    <map:has_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GAD Series M-120E</map:has_model>
+    <map:has_number_of_frets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</map:has_number_of_frets>
+    <map:has_brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guild</map:has_brand>
+    <map:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electric-acoustic</map:has_type>
+    <map:has_number_of_strings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</map:has_number_of_strings>
+    <map:is_left-handed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</map:is_left-handed>
+    <map:has_string_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bronze</map:has_string_material>
+    <map:has_product_identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guild - GAD Series M-120E</map:has_product_identifier>
+    <rdf:type rdf:resource="#Guitar_Description"/>
+    <map:has rdf:resource="#GuitarPartDescription/Guild/GAD_Series_M-120E/fingerboard"/>
+    <map:has_image rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.austinbazaar.com/media/catalog/product/cache/1/image/512x512/9df78eab33525d08d6e5fb8d27136e95/G/U/GUI-3818106821-2.jpg</map:has_image>
+  </rdf:Description>
+  <rdf:Description rdf:about="#OfferPart/LTD/XTONE_PC-2-12_BLK/1">
+    <map:with rdf:resource="#GuitarDescription/LTD/XTONE_PC-2-12_BLK"/>
+    <rdfs:label>OfferPart #LTD/XTONE_PC-2-12_BLK/1</rdfs:label>
+    <map:has_part_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_part_amount>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarPartDescription/Fender/Pawn_Shop_Bass_VI%2C_Rosewood_Fingerboard%2C_3-Color_Sunburst/fingerboard">
+    <map:has_look rdf:resource="#Look/rosewood/rosewood"/>
+    <map:is_of rdf:resource="#GuitarDescription/Fender/Pawn_Shop_Bass_VI%2C_Rosewood_Fingerboard%2C_3-Color_Sunburst"/>
+    <map:has_part_name>fingerboard</map:has_part_name>
+    <rdfs:label>GuitarPartDescription #Fender/Pawn Shop Bass VI, Rosewood Fingerboard, 3-Color Sunburst/fingerboard</rdfs:label>
+    <rdf:type rdf:resource="#Guitar_Part_Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Manufacturer/service%40espguitars.com">
+    <map:is rdf:resource="#Kind/service%40espguitars.com"/>
+    <rdfs:label>Manufacturer #service@espguitars.com</rdfs:label>
+    <rdf:type rdf:resource="#Manufacturer"/>
+    <rdfs:label>Manufacturer #service@espguitars.com</rdfs:label>
+    <rdf:type rdf:resource="#Manufacturer"/>
+    <rdfs:label>Manufacturer #service@espguitars.com</rdfs:label>
+    <rdf:type rdf:resource="#Manufacturer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarPartDescription/Epiphone/SG_G-400_PRO_CH_%28LH%29/fingerboard">
+    <map:has_look rdf:resource="#Look/rosewood/brown"/>
+    <map:is_of rdf:resource="#GuitarDescription/Epiphone/SG_G-400_PRO_CH_%28LH%29"/>
+    <map:has_part_name>fingerboard</map:has_part_name>
+    <rdfs:label>GuitarPartDescription #Epiphone/SG G-400 PRO CH (LH)/fingerboard</rdfs:label>
+    <rdf:type rdf:resource="#Guitar_Part_Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Manufacturer/service%40gretschguitars.com">
+    <map:is rdf:resource="#Kind/service%40gretschguitars.com"/>
+    <rdfs:label>Manufacturer #service@gretschguitars.com</rdfs:label>
+    <rdf:type rdf:resource="#Manufacturer"/>
+    <rdfs:label>Manufacturer #service@gretschguitars.com</rdfs:label>
+    <rdf:type rdf:resource="#Manufacturer"/>
+    <rdfs:label>Manufacturer #service@gretschguitars.com</rdfs:label>
+    <rdf:type rdf:resource="#Manufacturer"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Kind/service%40gretschguitars.com">
+    <vcard:hasAddress rdf:resource="#Address/USA/Scottsdale/AZ_85255/17600_N._Perimeter_Drive%2C_Suite_100"/>
+    <vcard:hasTelephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">480-596-9690</vcard:hasTelephone>
+    <vcard:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.gretsch.com/</vcard:hasURL>
+    <rdfs:label>Kind #service@gretschguitars.com</rdfs:label>
+    <vcard:hasEmailAdress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">service@gretschguitars.com</vcard:hasEmailAdress>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <vcard:hasLogo rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTE8d__Fh0MhhnOShBuAexiRebTnxxoWtacDPy0T0mvMGebNxIB9A</vcard:hasLogo>
+    <rdfs:label>Organization #service@gretschguitars.com</rdfs:label>
+    <vcard:hasOrganizationName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gretsch Guitars</vcard:hasOrganizationName>
+    <rdf:type rdf:resource="#Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Dimensions/42.0E0x15.0E0x5.0E0">
+    <map:has_length rdf:datatype="http://www.w3.org/2001/XMLSchema#double">42.0E0</map:has_length>
+    <map:has_depth rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.0E0</map:has_depth>
+    <rdfs:label>Dimensions #42.0E0x15.0E0x5.0E0</rdfs:label>
+    <map:has_width rdf:datatype="http://www.w3.org/2001/XMLSchema#double">15.0E0</map:has_width>
+    <rdf:type rdf:resource="#Dimensions"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Kind/service%40espguitars.com">
+    <vcard:hasAddress rdf:resource="#Address/USA/North_Hollywood/CA_91605/_10913_Vanowen_Street"/>
+    <vcard:hasTelephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(800) 423-8388</vcard:hasTelephone>
+    <vcard:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.espguitars.com/</vcard:hasURL>
+    <rdfs:label>Kind #service@espguitars.com</rdfs:label>
+    <vcard:hasEmailAdress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">service@espguitars.com</vcard:hasEmailAdress>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <vcard:hasLogo rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.eternalwinter.com/images_companies/esp_logo.gif</vcard:hasLogo>
+    <rdfs:label>Organization #service@espguitars.com</rdfs:label>
+    <vcard:hasOrganizationName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The ESP Guitar Company</vcard:hasOrganizationName>
+    <rdf:type rdf:resource="#Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#OfferPart/Fender/Villager%E2%84%A2_12_String%2C_Cutaway_Electric%2C_Solid_Spruce_Top%2C_Mahogany_Back_and_Sides%2C_Fishman%C2%AE_Preamp_with_Built-In_Tuner/1">
+    <map:with rdf:resource="#GuitarDescription/Fender/Villager%E2%84%A2_12_String%2C_Cutaway_Electric%2C_Solid_Spruce_Top%2C_Mahogany_Back_and_Sides%2C_Fishman%C2%AE_Preamp_with_Built-In_Tuner"/>
+    <rdfs:label>OfferPart #Fender/Villager%E2%84%A2_12_String%2C_Cutaway_Electric%2C_Solid_Spruce_Top%2C_Mahogany_Back_and_Sides%2C_Fishman%C2%AE_Preamp_with_Built-In_Tuner/1</rdfs:label>
+    <map:has_part_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_part_amount>
+    <rdf:type rdf:resource="#Price"/>
+    <map:with rdf:resource="#GuitarDescription/Fender/Villager%E2%84%A2_12_String%2C_Cutaway_Electric%2C_Solid_Spruce_Top%2C_Mahogany_Back_and_Sides%2C_Fishman%C2%AE_Preamp_with_Built-In_Tuner"/>
+    <rdfs:label>OfferPart #Fender/Villager%E2%84%A2_12_String%2C_Cutaway_Electric%2C_Solid_Spruce_Top%2C_Mahogany_Back_and_Sides%2C_Fishman%C2%AE_Preamp_with_Built-In_Tuner/1</rdfs:label>
+    <map:has_part_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_part_amount>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Dimensions/100.33E0x44.45E0x11.43E0">
+    <map:has_length rdf:datatype="http://www.w3.org/2001/XMLSchema#double">100.33E0</map:has_length>
+    <map:has_depth rdf:datatype="http://www.w3.org/2001/XMLSchema#double">11.43E0</map:has_depth>
+    <rdfs:label>Dimensions #100.33E0x44.45E0x11.43E0</rdfs:label>
+    <map:has_width rdf:datatype="http://www.w3.org/2001/XMLSchema#double">44.45E0</map:has_width>
+    <rdf:type rdf:resource="#Dimensions"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Address/USA/New_York/NY_10030/2534_Frederick_Douglass_Blvd">
+    <vcard:street-address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2534 Frederick Douglass Blvd</vcard:street-address>
+    <vcard:postal-code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NY 10030</vcard:postal-code>
+    <rdfs:label>Address #USA/New York/NY 10030/2534 Frederick Douglass Blvd</rdfs:label>
+    <vcard:locality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York</vcard:locality>
+    <vcard:country-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</vcard:country-name>
+    <vcard:region rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York</vcard:region>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Offer/13">
+    <map:has_price rdf:resource="#Price/798.0E0/USD"/>
+    <map:is_offered_by rdf:resource="#Kind/service%40espguitars.com"/>
+    <map:Offer_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</map:Offer_number>
+    <rdfs:label>Offer #13</rdfs:label>
+    <map:Offer_priceCurrency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USD</map:Offer_priceCurrency>
+    <map:has_stock_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_stock_amount>
+    <map:has_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</map:has_status>
+    <map:Offer_priceAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#double">798.0E0</map:Offer_priceAmount>
+    <rdf:type rdf:resource="#Offer"/>
+    <map:contains rdf:resource="#Guitar/ESP-12330"/>
+    <map:has_offer_part rdf:resource="#OfferPart/LTD/EC-407_Black_Satin/1"/>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bank transfer</map:accepts>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paypal</map:accepts>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAN</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</map:ships_to>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarPartDescription/Guild/GAD_Series_M-120E/fingerboard">
+    <map:has_look rdf:resource="#Look/rosewood/rosewood"/>
+    <map:is_of rdf:resource="#GuitarDescription/Guild/GAD_Series_M-120E"/>
+    <map:has_part_name>fingerboard</map:has_part_name>
+    <rdfs:label>GuitarPartDescription #Guild/GAD Series M-120E/fingerboard</rdfs:label>
+    <rdf:type rdf:resource="#Guitar_Part_Description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarDescription/Fender/American_Deluxe_Dimension%E2%84%A2_Bass_V%2C_Rosewood_Fingerboard%2C_Cayenne_Burst">
+    <map:is_created_by rdf:resource="#Manufacturer/service%40fender.com"/>
+    <map:has_product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fender - American Deluxe Dimension™ Bass V, Rosewood Fingerboard, Cayenne Burst</map:has_product_name>
+    <rdfs:label>GuitarDescription #Fender/American Deluxe Dimension™ Bass V, Rosewood Fingerboard, Cayenne Burst</rdfs:label>
+    <map:has_body_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">solid</map:has_body_type>
+    <map:has_string_gauge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medium</map:has_string_gauge>
+    <map:has_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American Deluxe Dimension™ Bass V, Rosewood Fingerboard, Cayenne Burst</map:has_model>
+    <map:has_number_of_frets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</map:has_number_of_frets>
+    <map:has_pickup_configuration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H</map:has_pickup_configuration>
+    <map:has_brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fender</map:has_brand>
+    <map:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bass</map:has_type>
+    <map:has_number_of_strings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</map:has_number_of_strings>
+    <map:is_left-handed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</map:is_left-handed>
+    <map:has_string_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">steel</map:has_string_material>
+    <map:has_weight rdf:datatype="http://www.w3.org/2001/XMLSchema#double">4.0E0</map:has_weight>
+    <map:has_product_identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fender - American Deluxe Dimension™ Bass V, Rosewood Fingerboard, Cayenne Burst</map:has_product_identifier>
+    <rdf:type rdf:resource="#Guitar_Description"/>
+    <map:has rdf:resource="#GuitarPartDescription/Fender/American_Deluxe_Dimension%E2%84%A2_Bass_V%2C_Rosewood_Fingerboard%2C_Cayenne_Burst/fingerboard"/>
+    <map:has rdf:resource="#GuitarPartDescription/Fender/American_Deluxe_Dimension%E2%84%A2_Bass_V%2C_Rosewood_Fingerboard%2C_Cayenne_Burst/neck"/>
+    <map:has_image rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://ecx.images-amazon.com/images/I/31GNrH8fcYL._SS500_.jpg</map:has_image>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Look/spruce/vintage_sunburst">
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spruce</map:has_material>
+    <rdfs:label>GlobalLook #spruce/vintage sunburst</rdfs:label>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vintage sunburst</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/GRE-99204">
+    <map:is_described_by rdf:resource="#GuitarDescription/Gretsch/Electromatic_Collection_Jet%E2%84%A2_Club"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GRE-99204</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</map:is_produced_in>
+    <rdfs:label>Guitar #GRE-99204</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Offer/12">
+    <map:has_price rdf:resource="#Price/425.0E0/USD"/>
+    <map:is_offered_by rdf:resource="#Kind/service%40gretschguitars.com"/>
+    <map:Offer_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</map:Offer_number>
+    <rdfs:label>Offer #12</rdfs:label>
+    <map:Offer_priceCurrency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USD</map:Offer_priceCurrency>
+    <map:has_discount rdf:datatype="http://www.w3.org/2001/XMLSchema#double">5.0E0</map:has_discount>
+    <map:has_stock_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_stock_amount>
+    <map:has_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</map:has_status>
+    <map:Offer_priceAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#double">425.0E0</map:Offer_priceAmount>
+    <rdf:type rdf:resource="#Offer"/>
+    <map:contains rdf:resource="#Guitar/GRE-99204"/>
+    <map:has_offer_part rdf:resource="#OfferPart/Gretsch/Electromatic_Collection_Jet%E2%84%A2_Club/1"/>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bank transfer</map:accepts>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">credit card</map:accepts>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAN</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</map:ships_to>
+  </rdf:Description>
+  <rdf:Description rdf:about="#OfferPart/Gretsch/Electromatic_Collection_CVT_III_Cherry/1">
+    <map:with rdf:resource="#GuitarDescription/Gretsch/Electromatic_Collection_CVT_III_Cherry"/>
+    <rdfs:label>OfferPart #Gretsch/Electromatic_Collection_CVT_III_Cherry/1</rdfs:label>
+    <map:has_part_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</map:has_part_amount>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Kind/jalte.a%40gmail.com">
+    <vcard:hasName rdf:resource="#Name/Jalte/Anna/_/Ms"/>
+    <rdfs:label>Individual #jalte.a@gmail.com</rdfs:label>
+    <rdf:type rdf:resource="#Individual"/>
+    <vcard:hasAddress rdf:resource="#Address/USA/New_York/NY_10030/2534_Frederick_Douglass_Blvd"/>
+    <vcard:hasTelephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(011) 745-496-5796</vcard:hasTelephone>
+    <rdfs:label>Kind #jalte.a@gmail.com</rdfs:label>
+    <vcard:hasEmailAdress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jalte.a@gmail.com</vcard:hasEmailAdress>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Look/mahogany/black">
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mahogany</map:has_material>
+    <rdfs:label>GlobalLook #mahogany/black</rdfs:label>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">black</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mahogany</map:has_material>
+    <rdfs:label>GlobalLook #mahogany/black</rdfs:label>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">black</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarDescription/LTD/XTONE_PC-2-12_BLK">
+    <map:is_created_by rdf:resource="#Manufacturer/service%40espguitars.com"/>
+    <map:has_product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LTD - XTONE PC-2-12 BLK</map:has_product_name>
+    <rdfs:label>GuitarDescription #LTD/XTONE PC-2-12 BLK</rdfs:label>
+    <map:has_body_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">semi-hollow</map:has_body_type>
+    <map:has_string_gauge rdf:datatype="http://www.w3.org/2001/XMLSchema#string">light</map:has_string_gauge>
+    <map:has_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">XTONE PC-2-12 BLK</map:has_model>
+    <map:has_number_of_frets rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</map:has_number_of_frets>
+    <map:has_pickup_configuration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H-H</map:has_pickup_configuration>
+    <map:has_brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LTD</map:has_brand>
+    <map:has_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electric</map:has_type>
+    <map:has_number_of_strings rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</map:has_number_of_strings>
+    <map:is_left-handed rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</map:is_left-handed>
+    <map:has_string_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">steel</map:has_string_material>
+    <map:has_product_identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LTD - XTONE PC-2-12 BLK</map:has_product_identifier>
+    <rdf:type rdf:resource="#Guitar_Description"/>
+    <map:has rdf:resource="#GuitarPartDescription/LTD/XTONE_PC-2-12_BLK/fingerboard"/>
+    <map:has_image rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://cdn.growassets.net/user_files/esp/product_images/000/010/372/xlarge.png?1389981882</map:has_image>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/FEN-48883">
+    <map:is_described_by rdf:resource="#GuitarDescription/Fender/Modern_Player_Jazz_Bass%C2%AE%2C_Rosewood_Fingerboard%2C_Olympic_White"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FEN-48883</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</map:is_produced_in>
+    <rdfs:label>Guitar #FEN-48883</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Kind/service%40hora.ro">
+    <vcard:hasAddress rdf:resource="#Address/Romania/Reghin/545300/3%2C_Salcamilor_st."/>
+    <vcard:hasTelephone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0040-265-512411 </vcard:hasTelephone>
+    <vcard:hasURL rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.hora.ro</vcard:hasURL>
+    <rdfs:label>Kind #service@hora.ro</rdfs:label>
+    <vcard:hasEmailAdress rdf:datatype="http://www.w3.org/2001/XMLSchema#string">service@hora.ro</vcard:hasEmailAdress>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Kind"/>
+    <vcard:hasLogo rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://prdkcssmedia1.blob.core.windows.net/sys-master-root/h9c/h69/8814399619102/RO000783.jpg</vcard:hasLogo>
+    <rdfs:label>Organization #service@hora.ro</rdfs:label>
+    <vcard:hasOrganizationName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hora Musical Instruments</vcard:hasOrganizationName>
+    <rdf:type rdf:resource="#Organization"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Look/alder/candy_apple_red">
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alder</map:has_material>
+    <rdfs:label>GlobalLook #alder/candy apple red</rdfs:label>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">candy apple red</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Offer/8">
+    <map:has_price rdf:resource="#Price/90.0E0/EUR"/>
+    <map:is_offered_by rdf:resource="#Kind/service%40hohner.de"/>
+    <map:Offer_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</map:Offer_number>
+    <rdfs:label>Offer #8</rdfs:label>
+    <map:Offer_priceCurrency rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EUR</map:Offer_priceCurrency>
+    <map:has_stock_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</map:has_stock_amount>
+    <map:has_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available</map:has_status>
+    <map:Offer_priceAmount rdf:datatype="http://www.w3.org/2001/XMLSchema#double">90.0E0</map:Offer_priceAmount>
+    <rdf:type rdf:resource="#Offer"/>
+    <map:contains rdf:resource="#Guitar/HOH-45699"/>
+    <map:contains rdf:resource="#Guitar/HOH-99208"/>
+    <map:has_offer_part rdf:resource="#OfferPart/Hohner/HC06/1"/>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bank transfer</map:accepts>
+    <map:accepts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paypal</map:accepts>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BEL</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEU</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRA</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GBR</map:ships_to>
+    <map:ships_to rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NLD</map:ships_to>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Price/540.0E0/USD">
+    <rdfs:label>Price #540.0E0/USD</rdfs:label>
+    <rdf:type rdf:resource="#Price"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/ESP-29950">
+    <map:is_described_by rdf:resource="#GuitarDescription/LTD/XTONE_PC-2-12_BLK"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ESP-29950</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</map:is_produced_in>
+    <rdfs:label>Guitar #ESP-29950</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Address/Netherlands/Uithoorn/1422_AK_/J.N._Wagenaarweg_9">
+    <vcard:street-address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J.N. Wagenaarweg 9</vcard:street-address>
+    <vcard:postal-code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1422 AK </vcard:postal-code>
+    <rdfs:label>Address #Netherlands/Uithoorn/1422 AK /J.N. Wagenaarweg 9</rdfs:label>
+    <vcard:locality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uithoorn</vcard:locality>
+    <vcard:country-name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Netherlands</vcard:country-name>
+    <rdf:type rdf:resource="http://www.w3.org/2006/vcard/ns#Address"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Guitar/FEN-40087">
+    <map:is_described_by rdf:resource="#GuitarDescription/Fender/Standard_Jazz_Bass%C2%AE_Left-Handed%2C_Rosewood_Fingerboard%2C_Brown_Sunburst%2C_3-Ply_Parchment_Pickguard%2C_No_Bag"/>
+    <map:has_serial_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FEN-40087</map:has_serial_number>
+    <map:is_produced_in rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</map:is_produced_in>
+    <rdfs:label>Guitar #FEN-40087</rdfs:label>
+    <rdf:type rdf:resource="#Guitar"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#Look/alder/fiesta_red">
+    <map:has_material rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alder</map:has_material>
+    <rdfs:label>GlobalLook #alder/fiesta red</rdfs:label>
+    <map:has_colour rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fiesta red</map:has_colour>
+    <rdf:type rdf:resource="#Look"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#GuitarPartDescription/LTD/H-330NT/fingerboard">
+    <map:has_look rdf:resource="#Look/rosewood/rosewood"/>
+    <map:is_of rdf:resource="#GuitarDescription/LTD/H-330NT"/>
+    <map:has_part_name>fingerboard</map:has_part_name>
+    <rdfs:label>GuitarPartDescription #LTD/H-330NT/fingerboard</rdfs:label>
+    <rdf:type rdf:resource="#Guitar_Part_Description"/>
+  </rdf:Description>
+</rdf:RDF>
