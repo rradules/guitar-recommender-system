@@ -1,8 +1,7 @@
 /**
  * Recommender using an ontology-driven information system.
  */
-
-package recommender;
+package ois_guitar_recommender;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
