@@ -3,14 +3,11 @@
   */
 package ois_guitar_recommender;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 
 import au.com.bytecode.opencsv.CSVReader;
-
-import org.apache.commons.collections4.bag.HashBag;
 
 public class Recommender {
     
@@ -57,6 +54,6 @@ public class Recommender {
         reader.close();
     }
     
-    private int m_recommendations;
-    private HashMap<String, Integer> m_frequencies;    //Each guitar mapped to its frequency.
+    private final int m_recommendations;
+    private final HashMap<String, Integer> m_frequencies;    //Each guitar mapped to its frequency.
 }
