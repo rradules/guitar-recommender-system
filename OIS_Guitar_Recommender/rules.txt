@@ -1,0 +1,13 @@
+[SiblingRule:
+	(?a ?r ?b),
+	isLiteral(?b),
+	(?a ?s ?c),
+	isLiteral(?c),
+	notEqual(?r,?s),
+	strConcat(?r, ?t),
+	regex(?t, 'http://www\.ois\.org/guitar-group#.*'),
+	strConcat(?s, ?u),regex(?u, 'http://www\.ois\.org/guitar-group#.*')
+->
+	(?r http://www.ois.org/guitar-group#sibling ?s),
+	(?s http://www.ois.org/guitar-group#sibling ?r)
+]
