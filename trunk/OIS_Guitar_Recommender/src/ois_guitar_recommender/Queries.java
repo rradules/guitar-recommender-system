@@ -8,6 +8,7 @@ import com.hp.hpl.jena.query.QueryFactory;
 import com.hp.hpl.jena.query.QuerySolution;
 import com.hp.hpl.jena.query.ResultSet;
 import com.hp.hpl.jena.rdf.model.InfModel;
+import com.hp.hpl.jena.rdf.model.Literal;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.Resource;
@@ -52,13 +53,13 @@ public class Queries {
     public String queryColor(String desc) {
         String queryString = "SELECT ?color WHERE {"
                 + desc + " ois:has_global_look ?look."
-                + "?look ois:has_color ?color.}";
+                + "?look ois:has_colour ?color.}";
 
         ResultSet results = query(queryString);
         if (results.hasNext()) {
             QuerySolution result = results.next();
-            Resource color = result.getResource("?color");
-            return color.toString();
+            Literal color = result.getLiteral("?color");
+            return color.getString();
         } else {
             return null;
         }
@@ -82,14 +83,23 @@ public class Queries {
         ////END JENA MAGIC////
     }
 
-    public static String queryBrand(String desc) {
-        String query = "SELECT ?brand WHERE {" + desc + " <http://www.ois.org/guitar.owl#has_brand> ?brand.}";
+    public String queryBrand(String desc) {
+
+        String queryString = "SELECT ?brand WHERE {"
+                + desc + " ois:has_brand ?brand.}";
+
+        ResultSet results = query(queryString);
+        if (results.hasNext()) {
+            QuerySolution result = results.next();
+            Literal brand = result.getLiteral("?brand");
+            return brand.getString();
+        } else {
+            return null;
+        }
 
         ////START JENA MAGIC////
-        String brand = "Fender";
+        //String brand = "Fender";
         ////END JENA MAGIC////
-
-        return brand;
     }
 
     public static String[] queryGuitarDescriptions() {
