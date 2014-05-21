@@ -1,8 +1,6 @@
 package ois_guitar_recommender;
 
-import java.lang.Math;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 
 import org.apache.commons.collections4.bag.HashBag;
@@ -44,15 +42,11 @@ public class Features {
             for (String desc : m_feature_matrix.keySet()) {                
                 String query = "SELECT ?sibling WHERE {" +
                         desc + " ns:has_global_look ?look." +
-                        "?look ns:has_color ?color." +
-                        "?color ns:sibling ?sibling.}";
-                
-                ////START JENA MAGIC////
-                String[] relevantSiblings = new String[0];
-                ////END JENA MAGIC////
+                        "ns:has_color ns:sibling ?r" +
+                        "?look ?r ?sibling.}";
                 
                 ArrayList<String> featureVector = m_feature_matrix.get(desc);
-                for (String sibling : relevantSiblings) {
+                for (String sibling : Queries.query(query)) {
                     featureVector.add(sibling);
                     frequencies.add(sibling, m_guitar_frequencies.get(desc));
                 }

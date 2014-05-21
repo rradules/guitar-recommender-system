@@ -1,6 +1,11 @@
 package ois_guitar_recommender;
 
 public class Queries {
+    public static String[] query(String query) {
+        ////JENA MAGIC////
+        return new String[0];
+    }
+    
     public static String queryColor(String desc) {
         String query = "SELECT ?color WHERE {" +
                 desc + " <http://www.ois.org/guitar.owl#has_global_look> ?look." +
