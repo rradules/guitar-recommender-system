@@ -77,7 +77,7 @@ public class OIS_Guitar_Recommender {
 //        }
         
         Queries q = new Queries();
-        System.out.println(q.queryColor("<http://www.ois.org/guitar-group#GuitarDescription/Fender/Modern_Player_Jazz_Bass%C2%AE%2C_Rosewood_Fingerboard%2C_Olympic_White>"));
+        System.out.println(q.queryColour("<http://www.ois.org/guitar-group#GuitarDescription/Fender/Modern_Player_Jazz_Bass%C2%AE%2C_Rosewood_Fingerboard%2C_Olympic_White>"));
         System.out.println(q.queryBrand("<http://www.ois.org/guitar-group#GuitarDescription/Fender/Modern_Player_Jazz_Bass%C2%AE%2C_Rosewood_Fingerboard%2C_Olympic_White>"));
     }
 }

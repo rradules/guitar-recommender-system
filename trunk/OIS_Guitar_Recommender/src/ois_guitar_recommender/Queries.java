@@ -1,5 +1,7 @@
 package ois_guitar_recommender;
 
+import java.util.ArrayList;
+
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntModelSpec;
 import com.hp.hpl.jena.query.Query;
@@ -42,15 +44,14 @@ public class Queries {
         model = ModelFactory.createInfModel(reasoner, union);
     }
 
-    private ResultSet query(String query) {
-        ////JENA MAGIC////
+    public ResultSet query(String query) {
         Query q = QueryFactory.create(prefixes + query);
         ResultSet results = QueryExecutionFactory.create(q, model).execSelect();
 
         return results;
     }
 
-    public String queryColor(String desc) {
+    public String queryColour(String desc) {
         String queryString = "SELECT ?color WHERE {"
                 + desc + " ois:has_global_look ?look."
                 + "?look ois:has_colour ?color.}";
@@ -63,28 +64,9 @@ public class Queries {
         } else {
             return null;
         }
-        ////START JENA MAGIC////
-//        String color;
-//        if (desc.equals("a")) {
-//            color = "white";
-//        } else if (desc.equals("b")) {
-//            color = "white";
-//        } else if (desc.equals("c")) {
-//            color = "cherry";
-//        } else if (desc.equals("d")) {
-//            color = "brown";
-//        } else if (desc.equals("e")) {
-//            color = "white";
-//        } else if (desc.equals("f")) {
-//            color = "cherry";
-//        } else {
-//            color = "unknown";
-//        }
-        ////END JENA MAGIC////
     }
 
     public String queryBrand(String desc) {
-
         String queryString = "SELECT ?brand WHERE {"
                 + desc + " ois:has_brand ?brand.}";
 
@@ -96,19 +78,33 @@ public class Queries {
         } else {
             return null;
         }
+    }
+    
+    public String queryType(String desc) {
+        String queryString = "SELECT ?type WHERE {"
+                + desc + " ois:has_type ?type.}";
 
-        ////START JENA MAGIC////
-        //String brand = "Fender";
-        ////END JENA MAGIC////
+        ResultSet results = query(queryString);
+        if (results.hasNext()) {
+            QuerySolution result = results.next();
+            Literal type = result.getLiteral("?type");
+            return type.getString();
+        } else {
+            return null;
+        }
     }
 
-    public static String[] queryGuitarDescriptions() {
-        String query = "SELECT ?name WHERE {?guitar ns:has_product_name ?name.}";
+    public ArrayList<String> queryGuitarDescriptions() {
+        String queryString = "SELECT ?desc WHERE {?desc a ois:Guitar_Description.}";
 
-        ////START JENA MAGIC////
-        String[] desc = new String[]{"a", "b", "c", "d", "e", "f", "g"};
-        ////END JENA MAGIC////
-
-        return desc;
+        ArrayList<String> descriptions = new ArrayList<>();
+        ResultSet results = query(queryString);
+        while (results.hasNext()) {
+            QuerySolution result = results.next();
+            Resource desc = result.getResource("?desc");
+            descriptions.add("<" + desc.toString() + ">");
+        }
+        
+        return descriptions;
     }
 }

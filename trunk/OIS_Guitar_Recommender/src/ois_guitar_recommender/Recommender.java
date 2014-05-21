@@ -5,9 +5,11 @@ package ois_guitar_recommender;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.Collections;
 import java.util.HashMap;
 
 import au.com.bytecode.opencsv.CSVReader;
+import java.util.ArrayList;
 
 public class Recommender {
     
@@ -25,20 +27,36 @@ public class Recommender {
     }
     
     public Recommender(String file, int nrOfRecommendations) throws IOException {
-        this.m_recommendations = nrOfRecommendations;
+        this.m_nr_of_recommendations = nrOfRecommendations;
         this.m_frequencies = new HashMap<>();
         
         readFrequenciesFromFile(file);
     }
     
     public String[] recommend() {
-        Features features = new Features(m_frequencies);
-        double probability = features.probability("e");
-        System.out.println(probability);
-        probability = features.probability("f");
-        System.out.println(probability);
+        Queries querier = new Queries();
+        ArrayList<String> guitarDescriptions = querier.queryGuitarDescriptions();
+        Features features = new Features(guitarDescriptions, m_frequencies, querier);
+        features.addRelevantFeatures();
         
-        return new String[0];
+        ArrayList<ProbabilityDescriptionPair> probabilities = new ArrayList<>();
+        for (String desc : guitarDescriptions) {
+            if (!m_frequencies.keySet().contains(desc)) {
+                probabilities.add(new ProbabilityDescriptionPair(features.probability(desc), desc));
+            }
+        }
+        Collections.sort(probabilities);
+        String[] recommendations = new String[m_nr_of_recommendations];
+        for (int i = 0; i < m_nr_of_recommendations; ++i) {
+            ProbabilityDescriptionPair recommendation = probabilities.get(i);
+            recommendations[i] = recommendation.m_description;
+            System.out.println(recommendation.m_description);
+            System.out.println(recommendation.m_probability);
+        }
+
+        System.out.println("done");
+        
+        return recommendations;
     }
     
     private void readFrequenciesFromFile(String file) throws IOException {
@@ -53,7 +71,27 @@ public class Recommender {
         }
         reader.close();
     }
+
+    private class ProbabilityDescriptionPair implements Comparable<ProbabilityDescriptionPair> {
+        public ProbabilityDescriptionPair(double probability, String description) {
+            this.m_probability = probability;
+            this.m_description = description;
+        }
+        
+        public int compareTo(ProbabilityDescriptionPair other) {
+            if (this.m_probability > other.m_probability) {
+                return -1;
+            } else if (this.m_probability < other.m_probability) {
+                return 1;
+            } else {
+                return 0;
+            }
+        }
+        
+        public double m_probability;
+        public String m_description;
+    }
     
-    private final int m_recommendations;
+    private final int m_nr_of_recommendations;
     private final HashMap<String, Integer> m_frequencies;    //Each guitar mapped to its frequency.
 }
