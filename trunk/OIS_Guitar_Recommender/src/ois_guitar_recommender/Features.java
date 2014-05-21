@@ -1,6 +1,8 @@
 package ois_guitar_recommender;
 
+import java.lang.Math;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 
 import org.apache.commons.collections4.bag.HashBag;
@@ -13,10 +15,10 @@ public class Features {
 	}
 	
 	public double probability(String hypothesis) {
-		String[] features = m_feature_matrix.get(hypothesis);
+		ArrayList<String> features = m_feature_matrix.get(hypothesis);
 		double result = 1.0;
 		for (int i = 0; i < m_nr_of_features; ++i) {
-			int nrOfEqualValues = m_feature_frequencies.get(i).getCount(features[i]);
+			int nrOfEqualValues = m_feature_frequencies.get(i).getCount(features.get(i));
 			int nrOfValues = m_feature_frequencies.get(i).size();
 			int nrOfDistinctValues = m_feature_frequencies.get(i).uniqueSet().size();
 		
@@ -28,13 +30,36 @@ public class Features {
 		}
 		return result;
 	}
+        
+        public void addRelevantFeatures() {
+            double[] relevance = getRelevancePerFeature();
+            
+            //Only for color.
+            if (relevance[0] >= 0.7) {
+                ////START JENA MAGIC////
+                //
+                //can we somehow infer a sibling relation?
+                //
+                //[concept A --has--> concept B]
+                //[concept A --has--> concept C]
+                //==>
+                //[concept B --is_sibling_of--> concept C]
+                //[concept C --is_sibling_of--> concept B]
+                //
+                //Then we can infer that color and material are siblings (~= under the same concept).
+                //
+                ////END JENA MAGIC////
+                
+                String[] relevantSiblings; //how to store queries for these?
+            }
+        }
 	
 	private double laplaceSmoothing(int x, int N, int d, double alpha) {
 		return (x + alpha) / (N + alpha*d);
 	}
 	
 	private void createFeatureMatrix() {
-		m_feature_matrix = new HashMap<String, String[]>();
+		m_feature_matrix = new HashMap<String, ArrayList<String>>();
 		
 		///// SOME JENA MAGIC /////
 		String[] guitarDescriptions = queryGuitarDescriptions();
@@ -42,10 +67,12 @@ public class Features {
 	
 		//Merge queries maybe
 		for (String desc : guitarDescriptions) {
-			String color = queryColor(desc);
-			String brand = queryBrand(desc);
+                        ArrayList<String> featureVector = new ArrayList<String>();
 
-			m_feature_matrix.put(desc, new String[]{color, brand});
+			featureVector.add(queryColor(desc));
+			featureVector.add(queryBrand(desc));
+
+			m_feature_matrix.put(desc, featureVector);
 		}
 	}
 	
@@ -57,9 +84,9 @@ public class Features {
 		}
 
 		for (String guitar : guitarFrequencies.keySet()) {
-			String[] featureVector = m_feature_matrix.get(guitar);
+			ArrayList<String> featureVector = m_feature_matrix.get(guitar);
 			for (int i = 0; i < m_nr_of_features; ++i) {
-				m_feature_frequencies.get(i).add(featureVector[i], guitarFrequencies.get(guitar));
+				m_feature_frequencies.get(i).add(featureVector.get(i), guitarFrequencies.get(guitar));
 			}
 		}
 	}
@@ -104,8 +131,23 @@ public class Features {
 	private String[] queryGuitarDescriptions() {
 		return new String[] {"a", "b", "c", "d", "e", "f", "g"};
 	}
+        
+        private double[] getRelevancePerFeature() {
+            double[] entropies = new double[m_nr_of_features];
+            for (int i = 0; i < m_nr_of_features; ++i) {
+                HashBag<String> values = m_feature_frequencies.get(i);
+                double entropy = 0.0;
+                double total = values.size();
+                for (String value : values.uniqueSet()) {
+                    double probability = (values.getCount(value) / total);
+                    entropy -= probability * Math.log(probability);
+                }
+                entropies[i] = 1 - entropy; //A feature with a low entropy is relevant.
+            }
+            return entropies;
+        }
 
 	private int m_nr_of_features;
-	private HashMap<String, String[]> m_feature_matrix;         //Each guitar mapped to its feature vector.
-	private ArrayList<HashBag<String>> m_feature_frequencies;   //Each feature index (in the feature vectors) has a bag of values.
+	private HashMap<String, ArrayList<String>> m_feature_matrix;         //Each guitar mapped to its feature vector.
+	private ArrayList<HashBag<String>> m_feature_frequencies;            //Each feature index (in the feature vectors) has a bag of values.
 }

@@ -29,7 +29,7 @@ public class Recommender {
 	
 	public Recommender(String file, int nrOfRecommendations) throws IOException {
 		this.m_recommendations = nrOfRecommendations;
-		this.m_frequencies = new HashMap<String, Integer>();
+		this.m_frequencies = new HashMap<>();
 
 		readFrequenciesFromFile(file);
 	}
@@ -45,18 +45,18 @@ public class Recommender {
 	}
 	
 	private void readFrequenciesFromFile(String file) throws IOException {
-		CSVReader reader = new CSVReader(new FileReader(file));
+            CSVReader reader = new CSVReader(new FileReader(file));
 	    String[] entry;
 	    while ((entry = reader.readNext()) != null) {
 	    	if (entry.length != 2) {
 			    reader.close();
 	    		throw new IOException("The number of fields in an entry is not correct.");
 	    	}
-	    	m_frequencies.put(entry[0], Integer.valueOf(entry[1]));
+                m_frequencies.put(entry[0], Integer.valueOf(entry[1]));
 	    }
 	    reader.close();
 	}
 
 	private int m_recommendations;
-	private HashMap<String, Integer> m_frequencies;						//Each guitar mapped to its frequency.
+	private HashMap<String, Integer> m_frequencies;    //Each guitar mapped to its frequency.
 }
