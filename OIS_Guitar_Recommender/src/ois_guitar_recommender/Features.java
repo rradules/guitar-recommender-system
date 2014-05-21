@@ -5,9 +5,14 @@ import java.util.HashMap;
 
 import org.apache.commons.collections4.bag.HashBag;
 
+import com.hp.hpl.jena.query.ResultSet;
+
+
 public class Features {
-    public Features(HashMap<String, Integer> guitarFrequencies) {
-        this.m_nr_of_features = 2;
+    public Features(ArrayList<String> guitarDescriptions, HashMap<String, Integer> guitarFrequencies, Queries querier) {
+        this.m_nr_of_features = 3;
+        this.m_guitar_descriptions = guitarDescriptions;
+        this.m_querier = querier;
         this.m_guitar_frequencies = guitarFrequencies;
         createFeatureMatrix();
         createFeatureFrequencies();
@@ -32,43 +37,52 @@ public class Features {
 
     public void addRelevantFeatures() {
         double[] relevance = getRelevancePerFeature();
-
+        
         //Only for color.
         if (relevance[0] >= 0.7) {
             //This should be more elaborate, since we know that 'color' only has one sibling,
             //and that 'material' is not optional when color is given.
             HashBag<String> frequencies = new HashBag<>();
             ++m_nr_of_features;
-            for (String desc : m_feature_matrix.keySet()) {                
-                String query = "SELECT ?sibling WHERE {" +
-                        desc + " ns:has_global_look ?look." +
-                        "ns:has_color ns:sibling ?r" +
+            for (String desc : m_feature_matrix.keySet()) {
+                String queryString = "SELECT ?sibling WHERE {" +
+                        desc + " ois:has_global_look ?look." +
+                        "ois:has_colour ois:sibling ?r." +
                         "?look ?r ?sibling.}";
                 
                 ArrayList<String> featureVector = m_feature_matrix.get(desc);
-                for (String sibling : Queries.query(query)) {
+                ResultSet results = m_querier.query(queryString);
+                while (results.hasNext()) {
+                    String sibling = results.next().getLiteral("?sibling").getString();
                     featureVector.add(sibling);
-                    frequencies.add(sibling, m_guitar_frequencies.get(desc));
+                    if (m_guitar_frequencies.containsKey(desc)) {
+                        frequencies.add(sibling, m_guitar_frequencies.get(desc));
+                    }
                 }
             }
             m_feature_frequencies.add(frequencies);
+        }
+        
+        //Print relevance per feature.
+        relevance = getRelevancePerFeature();
+        for (int i = 0; i < relevance.length; ++i) {
+            System.out.print(i);
+            System.out.print("\t");
+            System.out.println(relevance[i]);
         }
     }
  
     private void createFeatureMatrix() {
         m_feature_matrix = new HashMap<>();
-        
-        ///// SOME JENA MAGIC /////
-        String[] guitarDescriptions = Queries.queryGuitarDescriptions();
-        ///// END JENA MAGIC /////
-        
-        //Merge queries maybe
-        for (String desc : guitarDescriptions) {
+
+        //Merge queries maybe?
+        for (String desc : m_guitar_descriptions) {
             ArrayList<String> featureVector = new ArrayList<>();
             
-            featureVector.add(Queries.queryColor(desc));
-            featureVector.add(Queries.queryBrand(desc));
-            
+            featureVector.add(m_querier.queryColour(desc));
+            featureVector.add(m_querier.queryBrand(desc));
+            featureVector.add(m_querier.queryType(desc));
+
             m_feature_matrix.put(desc, featureVector);
         }
     }
@@ -89,7 +103,7 @@ public class Features {
     }
     
     private double[] getRelevancePerFeature() {
-        double[] entropies = new double[m_nr_of_features];
+        double[] relevance = new double[m_nr_of_features];
         for (int i = 0; i < m_nr_of_features; ++i) {
             HashBag<String> values = m_feature_frequencies.get(i);
             double entropy = 0.0;
@@ -98,9 +112,13 @@ public class Features {
                 double probability = (values.getCount(value) / total);
                 entropy -= probability * Math.log(probability);
             }
-            entropies[i] = 1 - entropy; //A feature with a low entropy is relevant.
+            if (values.uniqueSet().size() > 1) {
+                relevance[i] = 1 - entropy / Math.log(values.uniqueSet().size()); //A feature with a low entropy is relevant.
+            } else {
+                relevance[i] = 1;
+            }
         }
-        return entropies;
+        return relevance;
     }
        
     private static double laplaceSmoothing(int x, int N, int d, double alpha) {
@@ -108,6 +126,8 @@ public class Features {
     }
     
     private int m_nr_of_features;
+    private final ArrayList<String> m_guitar_descriptions;
+    private final Queries m_querier;
     private final HashMap<String, Integer> m_guitar_frequencies;
     private HashMap<String, ArrayList<String>> m_feature_matrix;         //Each guitar mapped to its feature vector.
     private ArrayList<HashBag<String>> m_feature_frequencies;            //Each feature index (in the feature vectors) has a bag of values.
