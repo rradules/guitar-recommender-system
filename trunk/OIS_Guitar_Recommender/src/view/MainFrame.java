@@ -6,6 +6,13 @@
 package view;
 
 import beans.Guitar_Description;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.TreeMap;
+import javax.swing.BoxLayout;
+import javax.swing.JPanel;
+import ois_guitar_recommender.Queries;
 
 /**
  *
@@ -16,15 +23,21 @@ public class MainFrame extends javax.swing.JFrame {
     /**
      * Creates new form MainFrame
      */
+    private ArrayList<Guitar_Description> guitar_descs;
+
     public MainFrame() {
         initComponents();
-        String desc = "<http://www.ois.org/guitar-group#GuitarDescription/Fender/Kurt_Cobain_Mustang%C2%AE_Left-Hand%2C_Rosewood_Fingerboard%2C_Fiesta_Red>";
-        Guitar_Description gd = new Guitar_Description(desc);
-        AbstractPanel p = new AbstractPanel(gd);
-        guitarPanel.setLayout(new java.awt.BorderLayout());
-        guitarPanel.add(p);
-       // this.revalidate();
-      //  this.repaint();
+        //  guitarScroll.setLayout();
+        // guitarScroll.setViewportView(guitarPanel);
+        ArrayList<String> descriptions = Queries.getInstance().queryGuitarDescriptions();
+        guitar_descs = new ArrayList<>();
+        guitarPanel.setLayout(new BoxLayout(guitarPanel, BoxLayout.Y_AXIS));
+        for (String desc : descriptions) {
+            Guitar_Description gd = new Guitar_Description(desc);
+            guitar_descs.add(gd);
+        }
+        buildPanel(guitar_descs);
+
     }
 
     /**
@@ -47,19 +60,27 @@ public class MainFrame extends javax.swing.JFrame {
         recomPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        guitarScroll = new javax.swing.JScrollPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         searchButton.setText("Search");
+        searchButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                searchButtonActionPerformed(evt);
+            }
+        });
 
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
+
+        guitarPanel.setEnabled(false);
 
         javax.swing.GroupLayout guitarPanelLayout = new javax.swing.GroupLayout(guitarPanel);
         guitarPanel.setLayout(guitarPanelLayout);
         guitarPanelLayout.setHorizontalGroup(
             guitarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 383, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         guitarPanelLayout.setVerticalGroup(
             guitarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -92,10 +113,13 @@ public class MainFrame extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 567, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 105, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(guitarPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(guitarScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                        .addComponent(guitarPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addGroup(layout.createSequentialGroup()
                                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                             .addGroup(layout.createSequentialGroup()
@@ -140,7 +164,9 @@ public class MainFrame extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(guitarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(guitarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(guitarScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(guitarType)
@@ -150,6 +176,37 @@ public class MainFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void searchButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchButtonActionPerformed
+        // TODO add your handling code here:
+        String searchString = searchField.getText();
+
+        ArrayList<GuitarDescriptionRank> ranks = new ArrayList<>();
+        ArrayList<Guitar_Description> descriptions = new ArrayList<>();
+        //   HashMap<Guitar_Description, Integer> results = new HashMap<>();
+        for (Guitar_Description gd : guitar_descs) {
+            int matching = gd.match(searchString);
+            if (matching >= Math.ceil(searchString.split(" ").length / 2.0)) {
+                ranks.add(new GuitarDescriptionRank(gd, matching));
+            }
+        }
+        Collections.sort(ranks);
+        for (GuitarDescriptionRank gdr : ranks) {
+            descriptions.add(gdr.getGuitar());
+        }
+        buildPanel(descriptions);
+
+    }//GEN-LAST:event_searchButtonActionPerformed
+
+    private void buildPanel(ArrayList<Guitar_Description> descriptions) {
+        JPanel guitarPanel = new JPanel();
+        guitarPanel.setLayout(new BoxLayout(guitarPanel, BoxLayout.Y_AXIS));
+        for (Guitar_Description gd : descriptions) {
+            AbstractPanel p = new AbstractPanel(gd);
+            guitarPanel.add(p);
+        }
+        guitarScroll.setViewportView(guitarPanel);
+    }
 
     /**
      * @param args the command line arguments
@@ -185,8 +242,38 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
     }
+
+    private static class GuitarDescriptionRank implements Comparable<GuitarDescriptionRank> {
+
+        private Guitar_Description guitar;
+        private int score;
+
+        public GuitarDescriptionRank(Guitar_Description guitar, int score) {
+            this.guitar = guitar;
+            this.score = score;
+        }
+
+        public Guitar_Description getGuitar() {
+            return guitar;
+        }
+
+        public int getScore() {
+            return score;
+        }
+
+        public int compareTo(GuitarDescriptionRank other) {
+            if (this.score > other.score) {
+                return -1;
+            } else if (this.score < other.score) {
+                return 1;
+            } else {
+                return 0;
+            }
+        }
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel guitarPanel;
+    private javax.swing.JScrollPane guitarScroll;
     private javax.swing.JLabel guitarType;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
