@@ -37,46 +37,49 @@ public class OIS_Guitar_Recommender {
         // TODO code application logic here
 
         //JENA SANDBOX
+//
+//        String schema = "http://wilma.vub.ac.be/~yajadoul/guitars/ontology_sizes2.rdf";
+//        String indiv = "http://wilma.vub.ac.be/~yajadoul/guitars/instances.rdf";
+//        String ois = "http://www.ois.org/guitar-group#";
+//
+//        OntModel base = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM_TRANS_INF);
+//        OntModel individuals = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM_TRANS_INF);
+//
+//        base.read(schema, "RDF/XML");
+//        base.read(indiv, "RDF/XML");
+//        Model model = ModelFactory.createUnion(base, individuals);
+//
+//        String rules = "http://wilma.vub.ac.be/~yajadoul/guitars/rules";
+//
+//        Reasoner reasoner = new GenericRuleReasoner(Rule.rulesFromURL(rules));
+//        reasoner.setDerivationLogging(true);
+//        InfModel inf = ModelFactory.createInfModel(reasoner, model);
 
-        String schema = "http://wilma.vub.ac.be/~yajadoul/guitars/ontology_sizes2.rdf";
-        String indiv = "http://wilma.vub.ac.be/~yajadoul/guitars/instances.rdf";
-        String ois = "http://www.ois.org/guitar-group#";
+//        String sparql = "SELECT ?guitar ?thing WHERE {"
+//                + "?guitar a ois:Guitar_Description."
+//                + "?guitar a ?thing }";
 
-        OntModel base = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM_TRANS_INF);
-        OntModel individuals = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM_TRANS_INF);
-
-        base.read(schema, "RDF/XML");
-        base.read(indiv, "RDF/XML");
-        Model model = ModelFactory.createUnion(base, individuals);
-
-        String rules = "http://wilma.vub.ac.be/~yajadoul/guitars/rules";
-
-        Reasoner reasoner = new GenericRuleReasoner(Rule.rulesFromURL(rules));
-        reasoner.setDerivationLogging(true);
-        InfModel inf = ModelFactory.createInfModel(reasoner, model);
-
-        String sparql = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
-                + "PREFIX owl: <http://www.w3.org/2002/07/owl#>\n"
-                + "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n"
-                + "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n"
-                + "PREFIX ois: <http://www.ois.org/guitar-group#>\n"
-                + "SELECT ?guitar WHERE {"
-                + "?guitar ois:has_length ?something }";
+        String sparql = "SELECT ?guitar WHERE {"
+                + "?guitar rdfs:subClassOf ois:Guitar_Description }";
 
 
-        Query query = QueryFactory.create(sparql);
-        ResultSet results = QueryExecutionFactory.create(query, inf).execSelect();
-        while (results.hasNext()) {
-            QuerySolution result = results.next();
-            //Literal l1 = result.getLiteral("?color");
-           // l1.
-           // Resource r1 = result.getResource("?color");
-            Resource r2 = result.getResource("?guitar");
-            System.out.println(r2.toString());
-        }
-        
+
         Queries q = new Queries();
-        System.out.println(q.queryColour("<http://www.ois.org/guitar-group#GuitarDescription/Fender/Modern_Player_Jazz_Bass%C2%AE%2C_Rosewood_Fingerboard%2C_Olympic_White>"));
-        System.out.println(q.queryBrand("<http://www.ois.org/guitar-group#GuitarDescription/Fender/Modern_Player_Jazz_Bass%C2%AE%2C_Rosewood_Fingerboard%2C_Olympic_White>"));
+        ResultSet res = q.query(sparql);
+
+        while (res.hasNext()) {
+            QuerySolution result = res.next();
+            //Literal l1 = result.getLiteral("?color");
+            Resource r1 = result.getResource("?guitar");
+          //  Resource r2 = result.getResource("?thing");
+            System.out.println(r1.toString());
+                    //+ "   " + r2.toString());
+        }
+
+        // InfModel model = q.getModel();
+        //  model.
+
+        //System.out.println(q.queryColour("<http://www.ois.org/guitar-group#GuitarDescription/Fender/Modern_Player_Jazz_Bass%C2%AE%2C_Rosewood_Fingerboard%2C_Olympic_White>"));
+        // System.out.println(q.queryBrand("<http://www.ois.org/guitar-group#GuitarDescription/Fender/Modern_Player_Jazz_Bass%C2%AE%2C_Rosewood_Fingerboard%2C_Olympic_White>"));
     }
 }

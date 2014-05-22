@@ -35,13 +35,17 @@ public class Queries {
         OntModel individuals = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM);
 
         base.read(schema, "RDF/XML");
-        base.read(indiv, "RDF/XML");
+        individuals.read(indiv, "RDF/XML");
         Model union = ModelFactory.createUnion(base, individuals);
         String rules = "http://wilma.vub.ac.be/~yajadoul/guitars/rules";
 
         Reasoner reasoner = new GenericRuleReasoner(Rule.rulesFromURL(rules));
         reasoner.setDerivationLogging(true);
         model = ModelFactory.createInfModel(reasoner, union);
+    }
+
+    public InfModel getModel() {
+        return model;
     }
 
     public ResultSet query(String query) {
@@ -79,7 +83,7 @@ public class Queries {
             return null;
         }
     }
-    
+
     public String queryType(String desc) {
         String queryString = "SELECT ?type WHERE {"
                 + desc + " ois:has_type ?type.}";
@@ -104,7 +108,7 @@ public class Queries {
             Resource desc = result.getResource("?desc");
             descriptions.add("<" + desc.toString() + ">");
         }
-        
+
         return descriptions;
     }
 }
