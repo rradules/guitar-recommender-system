@@ -17,6 +17,7 @@ import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.reasoner.Reasoner;
 import com.hp.hpl.jena.reasoner.rulesys.GenericRuleReasoner;
 import com.hp.hpl.jena.reasoner.rulesys.Rule;
+import sun.security.util.Length;
 
 public class Queries {
 
@@ -144,6 +145,36 @@ public class Queries {
             QuerySolution result = results.next();
             Literal material = result.getLiteral("?material");
             return material.getString();
+        } else {
+            return null;
+        }
+    }
+    
+    public String queryImage(String desc) {
+        String queryString = "SELECT ?image WHERE {"
+                + desc + " ois:has_image ?image.}";
+
+        ResultSet results = query(queryString);
+        if (results.hasNext()) {
+            QuerySolution result = results.next();
+            Literal image = result.getLiteral("?image");
+            return image.getString();
+        } else {
+            return null;
+        }
+    }
+    
+    public String querySizeString(String desc) {
+        String queryString = "SELECT ?type WHERE {"
+                + desc + " rdfs:type ?type."
+                + "?type rdfs:subClassOf ois:Guitar_Description.}";
+
+        ResultSet results = query(queryString);
+        if (results.hasNext()) {
+            QuerySolution result = results.next();
+            Resource type = result.getResource("?type");
+            String [] size = type.toString().split("_");
+            return size[size.length-1];
         } else {
             return null;
         }
