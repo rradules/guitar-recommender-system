@@ -48,11 +48,11 @@ public class Recommender {
         for (int i = 0; i < m_nr_of_recommendations; ++i) {
             ProbabilityDescriptionPair recommendation = probabilities.get(i);
             recommendations.add(recommendation.m_description);
-            //System.out.println(recommendation.m_description);
-            //System.out.println(recommendation.m_probability);
+            System.out.println(recommendation.m_description);
+            System.out.println(recommendation.m_probability);
         }
 
-        // System.out.println("done");
+         System.out.println("done");
 
         return recommendations;
     }
