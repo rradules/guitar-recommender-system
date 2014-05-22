@@ -55,25 +55,22 @@ public class OIS_Guitar_Recommender {
 //        reasoner.setDerivationLogging(true);
 //        InfModel inf = ModelFactory.createInfModel(reasoner, model);
 
-//        String sparql = "SELECT ?guitar ?thing WHERE {"
-//                + "?guitar a ois:Guitar_Description."
-//                + "?guitar a ?thing }";
+        String sparql = "SELECT ?guitar ?thing WHERE {"
+                + "?guitar a ois:Guitar_Description."
+                + "?guitar a ?thing }";
 
-        String sparql = "SELECT ?guitar WHERE {"
-                + "?guitar rdfs:subClassOf ois:Guitar_Description }";
+//        String sparql = "SELECT ?guitar WHERE {"
+//                + "?guitar rdfs:subClassOf ois:Guitar_Description }";
 
 
-
-        Queries q = new Queries();
-        ResultSet res = q.query(sparql);
+        ResultSet res = Queries.getInstance().query(sparql);
 
         while (res.hasNext()) {
             QuerySolution result = res.next();
             //Literal l1 = result.getLiteral("?color");
             Resource r1 = result.getResource("?guitar");
-          //  Resource r2 = result.getResource("?thing");
-            System.out.println(r1.toString());
-                    //+ "   " + r2.toString());
+            Resource r2 = result.getResource("?thing");
+            System.out.println(r1.toString()+ "   " + r2.toString());
         }
 
         // InfModel model = q.getModel();

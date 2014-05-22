@@ -34,9 +34,8 @@ public class Recommender {
     }
     
     public String[] recommend() {
-        Queries querier = new Queries();
-        ArrayList<String> guitarDescriptions = querier.queryGuitarDescriptions();
-        Features features = new Features(guitarDescriptions, m_frequencies, querier);
+        ArrayList<String> guitarDescriptions = Queries.getInstance().queryGuitarDescriptions();
+        Features features = new Features(guitarDescriptions, m_frequencies);
         features.addRelevantFeatures();
         
         ArrayList<ProbabilityDescriptionPair> probabilities = new ArrayList<>();
