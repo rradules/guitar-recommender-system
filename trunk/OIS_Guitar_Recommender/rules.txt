@@ -1,3 +1,5 @@
+@prefix ois: <http://www.ois.org/guitar-group#>.
+
 [SiblingRule:
 	(?a ?r ?b),
 	isLiteral(?b),
@@ -8,6 +10,35 @@
 	regex(?t, 'http://www\.ois\.org/guitar-group#.*'),
 	strConcat(?s, ?u),regex(?u, 'http://www\.ois\.org/guitar-group#.*')
 ->
-	(?r http://www.ois.org/guitar-group#sibling ?s),
-	(?s http://www.ois.org/guitar-group#sibling ?r)
+	(?r ois:sibling ?s),
+	(?s ois:sibling ?r)
 ]
+
+[Small:
+	(?guitar ois:has_dimensions ?dim),
+	(?dim ois:has_length ?length),
+	lessThan(?length, 100.0)
+->
+	(?guitar rdf:type ois:Guitar_Description_Small),
+	(ois:Guitar_Description_Small rdfs:subClassOf ois:Guitar_Description)
+]
+
+[Medium:
+	(?guitar ois:has_dimensions ?dim),
+	(?dim ois:has_length ?length),
+	greaterThan(?length, 100.0),
+	lessThan(?length, 110.0)
+->
+	(?guitar rdf:type ois:Guitar_Description_Medium),
+	(ois:Guitar_Description_Medium rdfs:subClassOf ois:Guitar_Description)
+]
+
+[Large:
+	(?guitar ois:has_dimensions ?dim),
+	(?dim ois:has_length ?length),
+	greaterThan(?length, 110.0)
+->
+	(?guitar rdf:type ois:Guitar_Description_Large),
+	(ois:Guitar_Description_Large rdfs:subClassOf ois:Guitar_Description)
+]
+
