@@ -189,7 +189,6 @@ public class MainFrame extends javax.swing.JFrame {
         guitar_rec = buildGuitarList(recommender.recommend());
 
         buildPanel(recScroll, guitar_rec);
-
     }//GEN-LAST:event_searchButtonActionPerformed
 
     private void buildPanel(JScrollPane panel, ArrayList<Guitar_Description> descriptions) {
