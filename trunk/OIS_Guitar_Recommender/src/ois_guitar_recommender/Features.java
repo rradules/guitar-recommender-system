@@ -10,7 +10,7 @@ import com.hp.hpl.jena.query.ResultSet;
 
 public class Features {
     public Features(ArrayList<String> guitarDescriptions, HashMap<String, Integer> guitarFrequencies) {
-        this.m_nr_of_features = 3;
+        this.m_nr_of_features = 4;
         this.m_guitar_descriptions = guitarDescriptions;
         this.m_guitar_frequencies = guitarFrequencies;
         createFeatureMatrix();
@@ -81,6 +81,7 @@ public class Features {
             featureVector.add(Queries.getInstance().queryColour(desc));
             featureVector.add(Queries.getInstance().queryBrand(desc));
             featureVector.add(Queries.getInstance().queryType(desc));
+            featureVector.add(Queries.getInstance().querySizeString(desc));
 
             m_feature_matrix.put(desc, featureVector);
         }
@@ -96,7 +97,9 @@ public class Features {
         for (String guitar : m_guitar_frequencies.keySet()) {
             ArrayList<String> featureVector = m_feature_matrix.get(guitar);
             for (int i = 0; i < m_nr_of_features; ++i) {
-                m_feature_frequencies.get(i).add(featureVector.get(i), m_guitar_frequencies.get(guitar));
+                if (featureVector.get(i) != null) {
+                    m_feature_frequencies.get(i).add(featureVector.get(i), m_guitar_frequencies.get(guitar));
+                }
             }
         }
     }

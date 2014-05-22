@@ -33,7 +33,7 @@ public class Recommender {
         readFrequenciesFromFile(file);
     }
     
-    public String[] recommend() {
+    public ArrayList<String> recommend() {
         ArrayList<String> guitarDescriptions = Queries.getInstance().queryGuitarDescriptions();
         Features features = new Features(guitarDescriptions, m_frequencies);
         features.addRelevantFeatures();
@@ -45,10 +45,10 @@ public class Recommender {
             }
         }
         Collections.sort(probabilities);
-        String[] recommendations = new String[m_nr_of_recommendations];
+        ArrayList<String> recommendations = new ArrayList<>();
         for (int i = 0; i < m_nr_of_recommendations; ++i) {
             ProbabilityDescriptionPair recommendation = probabilities.get(i);
-            recommendations[i] = recommendation.m_description;
+            recommendations.add(recommendation.m_description);
             System.out.println(recommendation.m_description);
             System.out.println(recommendation.m_probability);
         }
@@ -56,6 +56,15 @@ public class Recommender {
         System.out.println("done");
         
         return recommendations;
+    }
+    
+    public void addWitnessedDescriptions(String[] descriptions) {
+        for (String desc : descriptions) {
+            if (!m_frequencies.containsKey(desc)) {
+                m_frequencies.put(desc, 0);
+            }
+            m_frequencies.put(desc, m_frequencies.get(desc) + 1);
+        }
     }
     
     private void readFrequenciesFromFile(String file) throws IOException {
