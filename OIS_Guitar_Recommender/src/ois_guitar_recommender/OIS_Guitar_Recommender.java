@@ -38,43 +38,42 @@ public class OIS_Guitar_Recommender {
 
         //JENA SANDBOX
 
-//        String schema = "http://wilma.vub.ac.be/~yajadoul/guitars/ontology.rdf";
-//        String indiv = "http://wilma.vub.ac.be/~yajadoul/guitars/instances.rdf";
-//        String ois = "http://www.ois.org/guitar-group#";
-//
-//        OntModel base = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM);
-//        OntModel individuals = ModelFactory.createOntologyModel(OntModelSpec.OWL_MEM);
-//
-//        base.read(schema, "RDF/XML");
-//        base.read(indiv, "RDF/XML");
-//        Model model = ModelFactory.createUnion(base, individuals);
-//
-//        String rules = "http://wilma.vub.ac.be/~yajadoul/guitars/rules";
-//
-//        Reasoner reasoner = new GenericRuleReasoner(Rule.rulesFromURL(rules));
-//        reasoner.setDerivationLogging(true);
-//        InfModel inf = ModelFactory.createInfModel(reasoner, model);
-//
-//        String sparql = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
-//                + "PREFIX owl: <http://www.w3.org/2002/07/owl#>\n"
-//                + "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n"
-//                + "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n"
-//                + "PREFIX ois: <http://www.ois.org/guitar-group#>\n"
-//                + "SELECT ?gd ?color WHERE {"
-//                + "?gd ois:has_global_look ?look."
-//                + "?look ois:has_colour ?color.}";
-//
-//
-//        Query query = QueryFactory.create(sparql);
-//        ResultSet results = QueryExecutionFactory.create(query, inf).execSelect();
-//        while (results.hasNext()) {
-//            QuerySolution result = results.next();
-//            Literal l1 = result.getLiteral("?color");
-//           // l1.
-//           // Resource r1 = result.getResource("?color");
-//            Resource r2 = result.getResource("?gd");
-//            System.out.println(l1.getValue() + "  " + r2.toString());
-//        }
+        String schema = "http://wilma.vub.ac.be/~yajadoul/guitars/ontology_sizes2.rdf";
+        String indiv = "http://wilma.vub.ac.be/~yajadoul/guitars/instances.rdf";
+        String ois = "http://www.ois.org/guitar-group#";
+
+        OntModel base = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM_TRANS_INF);
+        OntModel individuals = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM_TRANS_INF);
+
+        base.read(schema, "RDF/XML");
+        base.read(indiv, "RDF/XML");
+        Model model = ModelFactory.createUnion(base, individuals);
+
+        String rules = "http://wilma.vub.ac.be/~yajadoul/guitars/rules";
+
+        Reasoner reasoner = new GenericRuleReasoner(Rule.rulesFromURL(rules));
+        reasoner.setDerivationLogging(true);
+        InfModel inf = ModelFactory.createInfModel(reasoner, model);
+
+        String sparql = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
+                + "PREFIX owl: <http://www.w3.org/2002/07/owl#>\n"
+                + "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n"
+                + "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n"
+                + "PREFIX ois: <http://www.ois.org/guitar-group#>\n"
+                + "SELECT ?guitar WHERE {"
+                + "?guitar ois:has_length ?something }";
+
+
+        Query query = QueryFactory.create(sparql);
+        ResultSet results = QueryExecutionFactory.create(query, inf).execSelect();
+        while (results.hasNext()) {
+            QuerySolution result = results.next();
+            //Literal l1 = result.getLiteral("?color");
+           // l1.
+           // Resource r1 = result.getResource("?color");
+            Resource r2 = result.getResource("?guitar");
+            System.out.println(r2.toString());
+        }
         
         Queries q = new Queries();
         System.out.println(q.queryColour("<http://www.ois.org/guitar-group#GuitarDescription/Fender/Modern_Player_Jazz_Bass%C2%AE%2C_Rosewood_Fingerboard%2C_Olympic_White>"));
