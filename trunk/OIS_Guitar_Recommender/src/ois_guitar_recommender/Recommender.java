@@ -58,7 +58,7 @@ public class Recommender {
         return recommendations;
     }
     
-    public void addWitnessedDescriptions(String[] descriptions) {
+    public void addWitnessedDescriptions(ArrayList<String> descriptions) {
         for (String desc : descriptions) {
             if (!m_frequencies.containsKey(desc)) {
                 m_frequencies.put(desc, 0);

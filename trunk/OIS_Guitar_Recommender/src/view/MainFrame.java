@@ -6,13 +6,18 @@
 package view;
 
 import beans.Guitar_Description;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.TreeMap;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.BoxLayout;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import ois_guitar_recommender.Queries;
+import ois_guitar_recommender.Recommender;
 
 /**
  *
@@ -24,19 +29,26 @@ public class MainFrame extends javax.swing.JFrame {
      * Creates new form MainFrame
      */
     private ArrayList<Guitar_Description> guitar_descs;
+    private ArrayList<Guitar_Description> guitar_rec;
+    Recommender recommender;
 
     public MainFrame() {
         initComponents();
-        //  guitarScroll.setLayout();
-        // guitarScroll.setViewportView(guitarPanel);
+        try {
+            recommender = new Recommender("guitars.dat", 3);
+        } catch (IOException ex) {
+            Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
         ArrayList<String> descriptions = Queries.getInstance().queryGuitarDescriptions();
         guitar_descs = new ArrayList<>();
-        guitarPanel.setLayout(new BoxLayout(guitarPanel, BoxLayout.Y_AXIS));
-        for (String desc : descriptions) {
-            Guitar_Description gd = new Guitar_Description(desc);
-            guitar_descs.add(gd);
-        }
-        buildPanel(guitar_descs);
+        guitar_rec = new ArrayList<>();
+
+        guitar_descs = buildGuitarList(descriptions);
+        guitar_rec = buildGuitarList(recommender.recommend());
+
+        buildPanel(guitarScroll, guitar_descs);
+        buildPanel(recScroll, guitar_rec);
 
     }
 
@@ -56,11 +68,10 @@ public class MainFrame extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
-        guitarPanel = new javax.swing.JPanel();
-        recomPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         guitarScroll = new javax.swing.JScrollPane();
+        recScroll = new javax.swing.JScrollPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -74,30 +85,6 @@ public class MainFrame extends javax.swing.JFrame {
 
         jSeparator3.setOrientation(javax.swing.SwingConstants.VERTICAL);
 
-        guitarPanel.setEnabled(false);
-
-        javax.swing.GroupLayout guitarPanelLayout = new javax.swing.GroupLayout(guitarPanel);
-        guitarPanel.setLayout(guitarPanelLayout);
-        guitarPanelLayout.setHorizontalGroup(
-            guitarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        guitarPanelLayout.setVerticalGroup(
-            guitarPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 354, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout recomPanelLayout = new javax.swing.GroupLayout(recomPanel);
-        recomPanel.setLayout(recomPanelLayout);
-        recomPanelLayout.setHorizontalGroup(
-            recomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 271, Short.MAX_VALUE)
-        );
-        recomPanelLayout.setVerticalGroup(
-            recomPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
         jLabel1.setText("Search results");
 
         jLabel2.setText("Recommendations");
@@ -106,42 +93,40 @@ public class MainFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jSeparator1)
+                .addGap(10, 10, 10))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
+                        .addGap(11, 11, 11)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 567, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(guitarScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 377, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(guitarPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(10, 10, 10)
-                                                .addComponent(jLabel1))
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addGap(1, 1, 1)
-                                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                                    .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                    .addComponent(guitarType, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                        .addGap(0, 0, Short.MAX_VALUE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel2)
-                                    .addComponent(recomPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(guitarType, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 146, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
+                        .addGap(91, 91, 91)
                         .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(37, 37, 37)
+                        .addGap(31, 31, 31)
                         .addComponent(searchButton)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(45, 45, 45)
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(guitarScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 371, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(jLabel2))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(recScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -151,27 +136,24 @@ public class MainFrame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(searchField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(searchButton))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 5, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(22, 22, 22)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(3, 3, 3)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 6, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(1, 1, 1)
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(recomPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(recScroll))
                     .addComponent(jSeparator3)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 8, Short.MAX_VALUE)
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(guitarPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(guitarScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addComponent(guitarScroll, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(guitarType)
                 .addGap(1, 1, 1)
-                .addComponent(jSeparator2))
+                .addComponent(jSeparator2, javax.swing.GroupLayout.DEFAULT_SIZE, 10, Short.MAX_VALUE))
         );
 
         pack();
@@ -182,7 +164,6 @@ public class MainFrame extends javax.swing.JFrame {
         String searchString = searchField.getText();
 
         ArrayList<GuitarDescriptionRank> ranks = new ArrayList<>();
-        ArrayList<Guitar_Description> descriptions = new ArrayList<>();
         //   HashMap<Guitar_Description, Integer> results = new HashMap<>();
         for (Guitar_Description gd : guitar_descs) {
             int matching = gd.match(searchString);
@@ -191,21 +172,43 @@ public class MainFrame extends javax.swing.JFrame {
             }
         }
         Collections.sort(ranks);
+
+        guitar_descs.clear();
+        guitar_rec.clear();
+
         for (GuitarDescriptionRank gdr : ranks) {
-            descriptions.add(gdr.getGuitar());
+            guitar_descs.add(gdr.getGuitar());
         }
-        buildPanel(descriptions);
+        buildPanel(guitarScroll, guitar_descs);
+        ArrayList<String> descList = new ArrayList<>();
+        for (Guitar_Description gd : guitar_descs) {
+            descList.add(gd.getDesc());
+        }
+
+        recommender.addWitnessedDescriptions(descList);
+        guitar_rec = buildGuitarList(recommender.recommend());
+
+        buildPanel(recScroll, guitar_rec);
 
     }//GEN-LAST:event_searchButtonActionPerformed
 
-    private void buildPanel(ArrayList<Guitar_Description> descriptions) {
+    private void buildPanel(JScrollPane panel, ArrayList<Guitar_Description> descriptions) {
         JPanel guitarPanel = new JPanel();
         guitarPanel.setLayout(new BoxLayout(guitarPanel, BoxLayout.Y_AXIS));
         for (Guitar_Description gd : descriptions) {
             AbstractPanel p = new AbstractPanel(gd);
             guitarPanel.add(p);
         }
-        guitarScroll.setViewportView(guitarPanel);
+        panel.setViewportView(guitarPanel);
+    }
+
+    private ArrayList<Guitar_Description> buildGuitarList(ArrayList<String> descriptions) {
+        ArrayList<Guitar_Description> list = new ArrayList<>();
+        for (String desc : descriptions) {
+            Guitar_Description gd = new Guitar_Description(desc);
+            list.add(gd);
+        }
+        return list;
     }
 
     /**
@@ -272,7 +275,6 @@ public class MainFrame extends javax.swing.JFrame {
         }
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel guitarPanel;
     private javax.swing.JScrollPane guitarScroll;
     private javax.swing.JLabel guitarType;
     private javax.swing.JLabel jLabel1;
@@ -281,7 +283,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JPanel recomPanel;
+    private javax.swing.JScrollPane recScroll;
     private javax.swing.JButton searchButton;
     private javax.swing.JTextField searchField;
     // End of variables declaration//GEN-END:variables
