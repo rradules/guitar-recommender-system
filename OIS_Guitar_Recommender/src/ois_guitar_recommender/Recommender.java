@@ -1,6 +1,6 @@
- /**
-  * Recommender using an ontology-driven information system.
-  */
+/**
+ * Recommender using an ontology-driven information system.
+ */
 package ois_guitar_recommender;
 
 import java.io.FileReader;
@@ -12,7 +12,7 @@ import au.com.bytecode.opencsv.CSVReader;
 import java.util.ArrayList;
 
 public class Recommender {
-    
+
 //    public static void main(String[] args) {
 //        try {
 //            if (args.length != 2) {
@@ -25,19 +25,18 @@ public class Recommender {
 //            e.printStackTrace();
 //        }
 //    }
-    
     public Recommender(String file, int nrOfRecommendations) throws IOException {
         this.m_nr_of_recommendations = nrOfRecommendations;
         this.m_frequencies = new HashMap<>();
-        
+
         readFrequenciesFromFile(file);
     }
-    
+
     public ArrayList<String> recommend() {
         ArrayList<String> guitarDescriptions = Queries.getInstance().queryGuitarDescriptions();
         Features features = new Features(guitarDescriptions, m_frequencies);
         features.addRelevantFeatures();
-        
+
         ArrayList<ProbabilityDescriptionPair> probabilities = new ArrayList<>();
         for (String desc : guitarDescriptions) {
             if (!m_frequencies.keySet().contains(desc)) {
@@ -49,15 +48,15 @@ public class Recommender {
         for (int i = 0; i < m_nr_of_recommendations; ++i) {
             ProbabilityDescriptionPair recommendation = probabilities.get(i);
             recommendations.add(recommendation.m_description);
-            System.out.println(recommendation.m_description);
-            System.out.println(recommendation.m_probability);
+            //System.out.println(recommendation.m_description);
+            //System.out.println(recommendation.m_probability);
         }
 
-        System.out.println("done");
-        
+        // System.out.println("done");
+
         return recommendations;
     }
-    
+
     public void addWitnessedDescriptions(ArrayList<String> descriptions) {
         for (String desc : descriptions) {
             if (!m_frequencies.containsKey(desc)) {
@@ -66,7 +65,7 @@ public class Recommender {
             m_frequencies.put(desc, m_frequencies.get(desc) + 1);
         }
     }
-    
+
     private void readFrequenciesFromFile(String file) throws IOException {
         CSVReader reader = new CSVReader(new FileReader(file));
         String[] entry;
@@ -81,11 +80,12 @@ public class Recommender {
     }
 
     private class ProbabilityDescriptionPair implements Comparable<ProbabilityDescriptionPair> {
+
         public ProbabilityDescriptionPair(double probability, String description) {
             this.m_probability = probability;
             this.m_description = description;
         }
-        
+
         public int compareTo(ProbabilityDescriptionPair other) {
             if (this.m_probability > other.m_probability) {
                 return -1;
@@ -95,11 +95,9 @@ public class Recommender {
                 return 0;
             }
         }
-        
         public double m_probability;
         public String m_description;
     }
-    
     private final int m_nr_of_recommendations;
     private final HashMap<String, Integer> m_frequencies;    //Each guitar mapped to its frequency.
 }
