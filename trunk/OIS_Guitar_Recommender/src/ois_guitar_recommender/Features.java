@@ -18,24 +18,37 @@ public class Features {
     }
 
     public double probability(String hypothesis) {
-        ArrayList<String> features = m_feature_matrix.get(hypothesis);
         double result = 1.0;
+        Double[] probabilities = getProbabilities(hypothesis);
+        for (Double probability : probabilities) {
+            //MAP with Laplace Smoothing.
+            result *= probability;
+        }        
+        return result;
+    }
+    
+    public Double[] getProbabilities(String hypothesis) {
+        ArrayList<String> features = m_feature_matrix.get(hypothesis);
+        Double[] probabilities = new Double[m_nr_of_features];
         for (int i = 0; i < m_nr_of_features; ++i) {
             int nrOfEqualValues = m_feature_frequencies.get(i).getCount(features.get(i));
             int nrOfValues = m_feature_frequencies.get(i).size();
             int nrOfDistinctValues = m_feature_frequencies.get(i).uniqueSet().size();
 
-            //probability = (# values conforming to hypothesis) / (# values)
-            double probability = laplaceSmoothing(nrOfEqualValues, nrOfValues, nrOfDistinctValues, 0.05);
-
-            //MAP with Laplace Smoothing.
-            result *= probability;
+            if (nrOfValues == 0) {
+                probabilities[i] = 0.0;
+            //} else if (features.get(i) == null) {
+                //probabilities[i] = laplaceSmoothing(nrOfEqualValues, nrOfValues, nrOfDistinctValues, 0.05);
+            } else {
+                //probability = (# values conforming to hypothesis) / (# values)
+                probabilities[i] = laplaceSmoothing(nrOfEqualValues, nrOfValues, nrOfDistinctValues, 0.05);
+            }
         }
-        return result;
+        return probabilities;
     }
 
     public void addRelevantFeatures() {
-        double[] relevance = getRelevancePerFeature();
+        Double[] relevance = getRelevancePerFeature();
         
         //Only for color.
         if (relevance[0] >= 0.7) {
@@ -62,13 +75,10 @@ public class Features {
             m_feature_frequencies.add(frequencies);
         }
         
-        //Print relevance per feature.
-        relevance = getRelevancePerFeature();
-        for (int i = 0; i < relevance.length; ++i) {
-            System.out.print(i);
-            System.out.print("\t");
-            System.out.println(relevance[i]);
-        }
+        ///UGLY///
+        System.out.println("=== Relevance per feature ===");
+        printPerFeature(getRelevancePerFeature());
+        //////////
     }
  
     private void createFeatureMatrix() {
@@ -97,15 +107,17 @@ public class Features {
         for (String guitar : m_guitar_frequencies.keySet()) {
             ArrayList<String> featureVector = m_feature_matrix.get(guitar);
             for (int i = 0; i < m_nr_of_features; ++i) {
-                if (featureVector.get(i) != null) {
+                if (featureVector.get(i) == null) {
+                    m_feature_frequencies.get(i).add(null, 3*m_guitar_frequencies.get(guitar));
+                } else {
                     m_feature_frequencies.get(i).add(featureVector.get(i), m_guitar_frequencies.get(guitar));
                 }
             }
         }
     }
     
-    private double[] getRelevancePerFeature() {
-        double[] relevance = new double[m_nr_of_features];
+    private Double[] getRelevancePerFeature() {
+        Double[] relevance = new Double[m_nr_of_features];
         for (int i = 0; i < m_nr_of_features; ++i) {
             HashBag<String> values = m_feature_frequencies.get(i);
             double entropy = 0.0;
@@ -117,7 +129,7 @@ public class Features {
             if (values.uniqueSet().size() > 1) {
                 relevance[i] = 1 - entropy / Math.log(values.uniqueSet().size()); //A feature with a low entropy is relevant.
             } else {
-                relevance[i] = 1;
+                relevance[i] = 1.0;
             }
         }
         return relevance;
@@ -126,6 +138,18 @@ public class Features {
     private static double laplaceSmoothing(int x, int N, int d, double alpha) {
         return (x + alpha) / (N + alpha*d);
     }
+    
+    ///UGLY///
+    public void printPerFeature(Object[] values) {
+        String[] featureNames = new String[]{"color\t", "brand\t", "type\t", "size\t", "material"};
+        for (int i = 0; i < values.length; ++i) {
+            System.out.print(featureNames[i]);
+            System.out.print("\t");
+            System.out.println(values[i]);
+        }
+        System.out.println();
+    }
+    //////////
     
     private int m_nr_of_features;
     private final ArrayList<String> m_guitar_descriptions;
