@@ -18,6 +18,7 @@ import ois_guitar_recommender.Queries;
 public class Guitar_Description {
 
     private String desc;
+    private String name;
     private String color_material;
     private String type;
     private String size;
@@ -25,6 +26,7 @@ public class Guitar_Description {
 
     public Guitar_Description(String desc) {
         this.desc = desc;
+        name = Queries.getInstance().queryProductName(desc);
         color_material = Queries.getInstance().queryColour(desc) + " "
                 + Queries.getInstance().queryMaterial(desc);
         type = Queries.getInstance().queryType(desc);
@@ -34,6 +36,10 @@ public class Guitar_Description {
         } catch (MalformedURLException ex) {
             Logger.getLogger(Guitar_Description.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    public String getName() {
+        return name;
     }
 
     public String getDesc() {
@@ -54,5 +60,10 @@ public class Guitar_Description {
 
     public URL getImageURL() {
         return imageURL;
+    }
+
+    @Override
+    public String toString() {
+        return "Guitar_Description{" + "name=" + name + ", color_material=" + color_material + ", type=" + type + '}';
     }
 }
