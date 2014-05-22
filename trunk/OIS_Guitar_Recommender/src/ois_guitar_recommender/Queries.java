@@ -20,6 +20,7 @@ import com.hp.hpl.jena.reasoner.rulesys.Rule;
 
 public class Queries {
 
+    private static Queries singleton = null;
     private InfModel model;
     private final static String prefixes = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n"
             + "PREFIX owl: <http://www.w3.org/2002/07/owl#>\n"
@@ -27,7 +28,7 @@ public class Queries {
             + "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n"
             + "PREFIX ois: <http://www.ois.org/guitar-group#>\n";
 
-    public Queries() {
+    private Queries() {
         String schema = "http://wilma.vub.ac.be/~yajadoul/guitars/ontology.rdf";
         String indiv = "http://wilma.vub.ac.be/~yajadoul/guitars/instances.rdf";
 
@@ -42,6 +43,13 @@ public class Queries {
         Reasoner reasoner = new GenericRuleReasoner(Rule.rulesFromURL(rules));
         reasoner.setDerivationLogging(true);
         model = ModelFactory.createInfModel(reasoner, union);
+    }
+
+    public static Queries getInstance() {
+        if (singleton == null) {
+            singleton = new Queries();
+        }
+        return singleton;
     }
 
     public InfModel getModel() {
@@ -110,5 +118,34 @@ public class Queries {
         }
 
         return descriptions;
+    }
+
+    public String queryProductName(String desc) {
+        String queryString = "SELECT ?name WHERE {"
+                + desc + " ois:has_product_name ?name.}";
+
+        ResultSet results = query(queryString);
+        if (results.hasNext()) {
+            QuerySolution result = results.next();
+            Literal name = result.getLiteral("?name");
+            return name.getString();
+        } else {
+            return null;
+        }
+    }
+
+    public String queryMaterial(String desc) {
+        String queryString = "SELECT ?material WHERE {"
+                + desc + " ois:has_global_look ?look."
+                + "?look ois:has_material ?material.}";
+
+        ResultSet results = query(queryString);
+        if (results.hasNext()) {
+            QuerySolution result = results.next();
+            Literal material = result.getLiteral("?material");
+            return material.getString();
+        } else {
+            return null;
+        }
     }
 }

@@ -17,7 +17,7 @@
 [Small:
 	(?guitar ois:has_dimensions ?dim),
 	(?dim ois:has_length ?length),
-	lessThan(?length, 100.0)
+	le(?length, 100.0)
 ->
 	(?guitar rdf:type ois:Guitar_Description_Small),
 	(ois:Guitar_Description_Small rdfs:subClassOf ois:Guitar_Description)
@@ -27,7 +27,7 @@
 	(?guitar ois:has_dimensions ?dim),
 	(?dim ois:has_length ?length),
 	greaterThan(?length, 100.0),
-	lessThan(?length, 110.0)
+	le(?length, 110.0)
 ->
 	(?guitar rdf:type ois:Guitar_Description_Medium),
 	(ois:Guitar_Description_Medium rdfs:subClassOf ois:Guitar_Description)

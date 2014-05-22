@@ -9,10 +9,9 @@ import com.hp.hpl.jena.query.ResultSet;
 
 
 public class Features {
-    public Features(ArrayList<String> guitarDescriptions, HashMap<String, Integer> guitarFrequencies, Queries querier) {
+    public Features(ArrayList<String> guitarDescriptions, HashMap<String, Integer> guitarFrequencies) {
         this.m_nr_of_features = 3;
         this.m_guitar_descriptions = guitarDescriptions;
-        this.m_querier = querier;
         this.m_guitar_frequencies = guitarFrequencies;
         createFeatureMatrix();
         createFeatureFrequencies();
@@ -51,7 +50,7 @@ public class Features {
                         "?look ?r ?sibling.}";
                 
                 ArrayList<String> featureVector = m_feature_matrix.get(desc);
-                ResultSet results = m_querier.query(queryString);
+                ResultSet results = Queries.getInstance().query(queryString);
                 while (results.hasNext()) {
                     String sibling = results.next().getLiteral("?sibling").getString();
                     featureVector.add(sibling);
@@ -79,9 +78,9 @@ public class Features {
         for (String desc : m_guitar_descriptions) {
             ArrayList<String> featureVector = new ArrayList<>();
             
-            featureVector.add(m_querier.queryColour(desc));
-            featureVector.add(m_querier.queryBrand(desc));
-            featureVector.add(m_querier.queryType(desc));
+            featureVector.add(Queries.getInstance().queryColour(desc));
+            featureVector.add(Queries.getInstance().queryBrand(desc));
+            featureVector.add(Queries.getInstance().queryType(desc));
 
             m_feature_matrix.put(desc, featureVector);
         }
@@ -127,7 +126,6 @@ public class Features {
     
     private int m_nr_of_features;
     private final ArrayList<String> m_guitar_descriptions;
-    private final Queries m_querier;
     private final HashMap<String, Integer> m_guitar_frequencies;
     private HashMap<String, ArrayList<String>> m_feature_matrix;         //Each guitar mapped to its feature vector.
     private ArrayList<HashBag<String>> m_feature_frequencies;            //Each feature index (in the feature vectors) has a bag of values.
