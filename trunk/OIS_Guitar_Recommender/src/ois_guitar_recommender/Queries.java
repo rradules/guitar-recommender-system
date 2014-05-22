@@ -166,7 +166,7 @@ public class Queries {
     
     public String querySizeString(String desc) {
         String queryString = "SELECT ?type WHERE {"
-                + desc + " rdfs:type ?type."
+                + desc + " a ?type."
                 + "?type rdfs:subClassOf ois:Guitar_Description.}";
 
         ResultSet results = query(queryString);
