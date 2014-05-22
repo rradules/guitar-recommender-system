@@ -66,4 +66,24 @@ public class Guitar_Description {
     public String toString() {
         return "Guitar_Description{" + "name=" + name + ", color_material=" + color_material + ", type=" + type + '}';
     }
+
+    public int match(String search) {
+        String[] tokens = search.split(" ");
+        int match = 0;
+        for (String token : tokens) {
+            if (name.toLowerCase().contains(token.toLowerCase())) {
+                match++;
+            }
+            if (color_material.toLowerCase().contains(token.toLowerCase())) {
+                match++;
+            }
+            if (type.toLowerCase().contains(token.toLowerCase())) {
+                match++;
+            }         
+            if ((size != null) && (size.toLowerCase().contains(token.toLowerCase()))) {
+                match++;
+            }
+        }
+        return match;
+    }
 }
