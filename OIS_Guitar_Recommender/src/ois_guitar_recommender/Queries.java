@@ -17,7 +17,6 @@ import com.hp.hpl.jena.rdf.model.Resource;
 import com.hp.hpl.jena.reasoner.Reasoner;
 import com.hp.hpl.jena.reasoner.rulesys.GenericRuleReasoner;
 import com.hp.hpl.jena.reasoner.rulesys.Rule;
-import sun.security.util.Length;
 
 public class Queries {
 
