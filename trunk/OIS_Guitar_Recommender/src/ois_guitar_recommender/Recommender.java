@@ -13,18 +13,6 @@ import java.util.ArrayList;
 
 public class Recommender {
 
-//    public static void main(String[] args) {
-//        try {
-//            if (args.length != 2) {
-//                throw new IOException("Both the frequency database file and number of recommendations should be given.");
-//            } else {
-//                Recommender recommender = new Recommender(args[0], Integer.parseInt(args[1]));
-//                recommender.recommend();
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace();
-//        }
-//    }
     public Recommender(String file, int nrOfRecommendations) throws IOException {
         this.m_nr_of_recommendations = nrOfRecommendations;
         this.m_frequencies = new HashMap<>();
