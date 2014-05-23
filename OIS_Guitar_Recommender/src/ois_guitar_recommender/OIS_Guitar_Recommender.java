@@ -4,6 +4,9 @@
  */
 package ois_guitar_recommender;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import view.MainFrame;
 
 /**
@@ -40,10 +43,21 @@ public class OIS_Guitar_Recommender {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MainFrame().setVisible(true);
+        try {
+            if (args.length != 2) {
+                throw new IOException("Both the frequency database file and number of recommendations should be given.");
+            } else {
+                final String frequencies = args[0];
+                final int nrOfRecommendations = Integer.parseInt(args[1]);
+
+                java.awt.EventQueue.invokeLater(new Runnable() {
+                    public void run() {
+                        new MainFrame(frequencies, nrOfRecommendations).setVisible(true);
+                    }
+                });
             }
-        });
+        } catch (IOException ex) {
+            Logger.getLogger(OIS_Guitar_Recommender.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

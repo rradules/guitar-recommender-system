@@ -32,10 +32,10 @@ public class MainFrame extends javax.swing.JFrame {
     private ArrayList<Guitar_Description> guitar_rec;
     Recommender recommender;
 
-    public MainFrame() {
+    public MainFrame(String frequenciesFile, int nrOfRecommendations) {
         initComponents();
         try {
-            recommender = new Recommender("guitars.dat", 3);
+            recommender = new Recommender(frequenciesFile, nrOfRecommendations);
         } catch (IOException ex) {
             Logger.getLogger(MainFrame.class.getName()).log(Level.SEVERE, null, ex);
         }
