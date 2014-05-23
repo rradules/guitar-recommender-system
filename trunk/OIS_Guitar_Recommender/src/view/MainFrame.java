@@ -9,8 +9,6 @@ import beans.Guitar_Description;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashMap;
-import java.util.TreeMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.BoxLayout;
@@ -34,6 +32,7 @@ public class MainFrame extends javax.swing.JFrame {
 
     public MainFrame(String frequenciesFile, int nrOfRecommendations) {
         initComponents();
+        this.setTitle("OIS - Guitar Recommender");
         try {
             recommender = new Recommender(frequenciesFile, nrOfRecommendations);
         } catch (IOException ex) {
